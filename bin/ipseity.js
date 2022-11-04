@@ -3,7 +3,7 @@
 import { join, dirname } from 'path';
 import { readFile } from 'node:fs/promises';
 import { program  } from 'commander';
-import { processFile } from "../lib/process.js";
+import { processFile, watchFile } from "../lib/process.js";
 
 const { version } = JSON.parse(await readFile(join(dirname(import.meta.url.replace(/^file:\/*/, '/')), '../package.json')));
 
@@ -29,7 +29,7 @@ program
   .argument('<md>', 'MD input file')
   .argument('<html>', 'HTML output file')
   .action(async (md, html) => {
-
+    await watchFile(md, html);
   })
 ;
 
