@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "eslint": "^8.26.0"
+  },
+  "dependencies": {
+    "commander": "^9.4.1"
   }
 }
