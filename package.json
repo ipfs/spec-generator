@@ -61,6 +61,6 @@
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "remark-squeeze-paragraphs": "^5.0.1",
-    "remark-toc": "^8.0.1"
+    "respec": "^32.3.0"
   }
 }

@@ -14,7 +14,7 @@
     - [ ] List editors
     - [ ] GitHub source
     - [x] Set title correctly
-    - [ ] Inject modified date
+    - [x] Inject modified date
     - [ ] Sectionify
     - [ ] ToC
     - [ ] Sectionals
