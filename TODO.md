@@ -4,11 +4,29 @@
 - [x] set up bin
 - [x] set up lib
 - [x] command for watch
-- [ ] nodemon for watch in dev
+- [x] nodemon for watch in dev
 - [x] basic remark generation
 - [x] basic template
-- [ ] basic CSS
-- [ ] set up watch to have an HTTP server and inject code that reloads
+- [x] basic CSS
+- [x] set up watch to have an HTTP server and inject code that reloads
+- [ ] Features
+    - [ ] Parse metadata
+    - [ ] List editors
+    - [ ] GitHub source
+    - [x] Set title correctly
+    - [ ] Inject modified date
+    - [ ] Sectionify
+    - [ ] ToC
+    - [ ] Sectionals
+    - [ ] Issues
+    - [ ] Notes
+    - [ ] Download references from SpecRef
+    - [ ] Have own additional references
+    - [ ] Put references on IPFS
+    - [ ] Definitions
+    - [ ] Definition references
+    - [ ] PR mode
+    - [ ] Multiformat metadata (some hover thing)
 - [ ] early tests
 - [ ] Look into hosting — Fleek?
 - [ ] Start setting up the structure of the spec space
