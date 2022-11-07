@@ -18,7 +18,8 @@
     - [ ] Sectionify
     - [ ] ToC
     - [ ] Sectionals
-    - [ ] Issues
+    - [ ] IDs on sections
+    - [ ] Issues (use :: directives)
     - [ ] Notes
     - [ ] Download references from SpecRef
     - [ ] Have own additional references
@@ -27,7 +28,7 @@
     - [ ] Definition references
     - [ ] PR mode
     - [ ] Multiformat metadata (some hover thing)
-- [ ] early tests
+- [x] early tests
 - [ ] Look into hosting — Fleek?
 - [ ] Start setting up the structure of the spec space
     - [ ] Where do PRs go?

@@ -29,6 +29,7 @@
   "eslintConfig": {
     "env": {
       "browser": true,
+      "mocha": true,
       "es2021": true
     },
     "extends": "eslint:recommended",
@@ -43,7 +44,9 @@
     "concurrently": "^7.5.0",
     "cssn": "^3.3.0",
     "eslint": "^8.26.0",
-    "nodemon": "^2.0.20"
+    "mocha": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "selectron-test": "^2.0.0"
   },
   "dependencies": {
     "chalk": "^5.1.2",
@@ -57,6 +60,7 @@
     "normalize.css": "^8.0.1",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
+    "remark-squeeze-paragraphs": "^5.0.1",
     "remark-toc": "^8.0.1"
   }
 }
