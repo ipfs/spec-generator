@@ -8,3 +8,21 @@ a testing ground for dev.
 ## Introduction
 
 And here we go.
+
+## No Empty Paragraphs
+
+This section could easily have tons of empty grafs.
+
+
+
+
+But it doesn't!
+
+
+How cool is that?
+
+
+
+## Something Else
+
+Ok. Good.
