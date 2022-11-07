@@ -13,13 +13,13 @@
           let body = await res.text();
           body = body.replace(/^.*?<head/m, '<head').replace('</html>', '');
           document.documentElement.innerHTML = body;
-          console.log(`[2022-11-07T22:30:56.598Z] updated!`);
+          console.log(`[2022-11-07T23:11:25.062Z] updated!`);
         }
       }
     </script>
   </head>
   <body>
-<h1>Kitchen Sink Specification</h1>
+<header><h1>Kitchen Sink Specification</h1><p id="last-modified"><time datetime="2022-11-07T22:29:42.985Z">7 November 2022</time></p></header>
 <p>The purpose of this specification is to try out every last stupid feature of this
 project (or close to it) so as to serve 1) as a form of deranged example and 2) as
 a testing ground for dev.</p>

@@ -22,6 +22,7 @@
   --max-readable-width: 50rem;
   --heading-family: Catamaran, sans-serif;
   --body-family: Mulish, sans-serif;
+  --highlight-colour: rgb(26, 83, 217);
 }
 
 html {
@@ -43,9 +44,18 @@ body {
   font-weight: 300;
 }
 
+header {
+  margin-bottom: 4rem;
+}
+
 h1 {
   font-family: var(--heading-family);
   max-width: calc(100% - (100px + 1rem));
   font-size: 3rem;
-  margin-top: 0.15rem;
+  margin: 0.15rem 0 0 0;
+}
+p#last-modified {
+  color: var(--highlight-colour);
+  margin-top: -1rem;
+  font-size: 1.6rem;
 }
