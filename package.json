@@ -5,7 +5,22 @@
   "description": "InterPlanetary Standards Edited and Integrated to Travel Yonder (IPSEITY)",
   "author": "Robin Berjon <robin@berjon.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "watch": "concurrently --handle-input npm:watch-js npm:watch-css",
+    "watch-js": "nodemon bin/ipseity.js watch playground/kitchen-sink.md playground/kitchen-sink.html",
+    "watch-css": "NODE_ENV=production cssn -w static/ipseity.css static/ipseity.min.css",
+    "test": "mocha"
+  },
+  "mocha": {
+    "reporter": "spec",
+    "bail": true
+  },
+  "nodemonConfig": {
+    "watch": [
+      "lib",
+      "bin"
+    ]
+  },
   "bin": {},
   "repository": {
     "type": "git",
@@ -25,7 +40,10 @@
     "rules": {}
   },
   "devDependencies": {
-    "eslint": "^8.26.0"
+    "concurrently": "^7.5.0",
+    "cssn": "^3.3.0",
+    "eslint": "^8.26.0",
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "chalk": "^5.1.2",
@@ -35,6 +53,7 @@
     "express": "^4.18.2",
     "express-sse": "^0.5.3",
     "get-port": "^6.1.2",
+    "normalize.css": "^8.0.1",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1"
   }

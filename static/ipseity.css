@@ -1,0 +1,51 @@
+
+@import 'normalize.css';
+
+@font-face {
+  font-family: "Catamaran";
+  src: url("/fonts/Catamaran-VariableFont_wght.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("/fonts/Mulish-VariableFont_wght.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("/fonts/Mulish-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+
+:root {
+  --bg: #fff;
+  --max-readable-width: 50rem;
+  --heading-family: Catamaran, sans-serif;
+  --body-family: Mulish, sans-serif;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  max-width: var(--max-readable-width);
+  margin: 0 auto;
+  padding: 1rem 0 0 0;
+  background-image: url(ipfs.svg);
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position-x: right;
+  background-position-y: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-family: var(--body-family);
+  font-weight: 300;
+}
+
+h1 {
+  font-family: var(--heading-family);
+  max-width: calc(100% - (100px + 1rem));
+  font-size: 3rem;
+  margin-top: 0.15rem;
+}

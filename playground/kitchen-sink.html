@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>XXX</title>
+    <link rel="stylesheet" href="/ipseity.min.css">
+    <link rel="icon" href="/ipfs.svg">
+    <script>
+      const est = new EventSource('/ipseity');
+      est.onmessage = async ({ data }) => {
+        data = data.replace(/\W/g, '');
+        if (data === 'refresh') {
+          const res = await fetch(document.location.href);
+          let body = await res.text();
+          body = body.replace(/^.*?<head/m, '<head').replace('</html>', '');
+          document.documentElement.innerHTML = body;
+          console.log(`[2022-11-07T21:18:51.600Z] updated!`);
+        }
+      }
+    </script>
+  </head>
+  <body>
+<h1>Kitchen Sink Specification</h1>
+<p>The purpose of this specification is to try out every last stupid feasture of this
+project (or close to it) so as to serve 1) as a form of deranged example and 2) as
+a testing ground for dev.</p>
+
+  </body>
+</html>
