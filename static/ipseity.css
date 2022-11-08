@@ -56,6 +56,9 @@ h1 {
   font-size: 3rem;
   margin: 0.15rem 0 0 0;
 }
+h2 {
+  font-size: 1.4rem;
+}
 p#last-modified {
   color: var(--highlight-colour);
   margin-top: -1rem;
@@ -104,4 +107,29 @@ a {
 }
 body:not(.toc-inline) :not(li) > .toc {
   margin-left: 4rem;
+}
+
+:is(h2, h3, h4, h5, h6):not(#toc > h2) {
+  position: relative;
+  left: -.5em;
+}
+.header-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+:is(h2, h3, h4, h5, h6) + a.self-link {
+  color: inherit;
+  order: -1;
+  position: relative;
+  left: -1.1em;
+  font-size: 1rem;
+  opacity: .5;
+}
+:is(h2, h3) + a.self-link {
+  top: -.2em;
+}
+:is(h2, h3, h4, h5, h6) + a.self-link::before {
+  content: "§";
+  text-decoration: none;
+  color: var(--secondary-highlight);
 }

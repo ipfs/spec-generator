@@ -15,10 +15,10 @@
     - [ ] GitHub source
     - [x] Set title correctly
     - [x] Inject modified date
-    - [ ] Sectionify
-    - [ ] ToC
-    - [ ] Sectionals
-    - [ ] IDs on sections
+    - [x] Sectionify
+    - [x] ToC
+    - [x] Sectionals
+    - [x] IDs on sections
     - [ ] Issues (use :: directives)
     - [ ] Notes
     - [ ] Download references from SpecRef
