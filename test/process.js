@@ -78,6 +78,12 @@ describe('General MD/HTML Processing', function () {
     selectron('body > section:nth-of-type(3) > section > div.header-wrapper > a[href="#renested"]');
     selectron('body > section:nth-of-type(3) > section > div.header-wrapper > a[aria-label="Section 3.1"]');
   });
+  it('accepts custom header IDs', async () => {
+    const doc = await md2doc('## Introduction {#intro}');
+    const selectron = makeSelectron(doc);
+    selectron('h2#intro', /Introduction/);
+    selectron('h2#intro + a[href="#intro"]');
+  });
 });
 
 async function md2doc (md, opt) {

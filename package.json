@@ -59,6 +59,7 @@
     "jsdom": "^20.0.2",
     "normalize.css": "^8.0.1",
     "remark": "^14.0.2",
+    "remark-heading-id": "^1.0.0",
     "remark-html": "^15.0.1",
     "remark-squeeze-paragraphs": "^5.0.1",
     "respec": "^32.3.0"
