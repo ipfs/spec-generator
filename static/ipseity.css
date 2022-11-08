@@ -22,7 +22,9 @@
   --max-readable-width: 50rem;
   --heading-family: Catamaran, sans-serif;
   --body-family: Mulish, sans-serif;
+  --text-colour: #000;
   --highlight-colour: rgb(26, 83, 217);
+  --secondary-highlight: rgb(60, 207, 135);
 }
 
 html {
@@ -58,4 +60,48 @@ p#last-modified {
   color: var(--highlight-colour);
   margin-top: -1rem;
   font-size: 1.6rem;
+}
+
+a {
+  color: var(--highlight-colour);
+}
+
+.toc, .toc ol, .toc ul, .toc li {
+  line-height: 1.1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.toc li {
+  clear: both;
+}
+.toc > li {
+  margin: 1.5rem 0;
+  font-weight: bold;
+}
+.toc > li li {
+  margin: 0.3rem 0;
+}
+.toc > li li {
+  font-weight: normal;
+}
+.toc a {
+  padding: 0.1rem 1px 0;
+  display: block;
+  text-decoration: none;
+  color: var(--text-colour);
+}
+.toc a:hover, .toc a:focus {
+  color: var(--highlight-colour);
+}
+#toc .toc .secno {
+  margin-left: -4rem;
+}
+.toc .secno {
+  float: left;
+  width: 4rem;
+  white-space: nowrap;
+}
+body:not(.toc-inline) :not(li) > .toc {
+  margin-left: 4rem;
 }

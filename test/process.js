@@ -4,6 +4,26 @@ import { JSDOM } from 'jsdom';
 import makeSelectron from 'selectron-test';
 import { processMD } from '../lib/process.js';
 
+const sectionDoc = `
+# One
+
+graf
+
+## Two 1
+
+## Two 2
+
+### Three 1
+
+### Three 2
+
+#### Four
+
+## Two 3
+
+#### Renested
+`;
+
 describe('General MD/HTML Processing', function () {
   it('sets the title', async () => {
     const doc = await md2doc('# The `fun` spec');
@@ -23,11 +43,32 @@ describe('General MD/HTML Processing', function () {
   it('drops empty grafs', async () => {
     const doc = await md2doc('## No Empty Paragraphs\n\n\ngr1\n\n\n\ngr2\n\n\n  \n\n\ngr3\n\n\n\n\n ');
     const selectron = makeSelectron(doc);
-    selectron('h2', 'No Empty Paragraphs');
-    selectron('p:not(#last-modified)', 3);
+    selectron('section > h2', /No Empty Paragraphs/);
+    selectron('section > p', 3);
   });
   it('produces sections', async () => {
-    // XXX need to actually test this
+    const doc = await md2doc(sectionDoc);
+    const selectron = makeSelectron(doc);
+    selectron('section', 7);
+    selectron('body > section', 3);
+    selectron('body > section:nth-of-type(1) section', false);
+    selectron('body > section:nth-of-type(2) > section', 2);
+    selectron('body > section:nth-of-type(2) > section:nth-of-type(1) > section', false);
+    selectron('body > section:nth-of-type(2) > section:nth-of-type(2) > section', 1);
+    selectron('body > section:nth-of-type(2) > section:nth-of-type(2) > section:nth-of-type(1) > h4', /Four/);
+    selectron('body > section:nth-of-type(2) > section:nth-of-type(2) > section:nth-of-type(1) > section', false);
+    selectron('body > section:nth-of-type(3) > section > h3', /Renested/);
+  });
+  it('produces a ToC', async () => {
+    const doc = await md2doc(sectionDoc);
+    const selectron = makeSelectron(doc);
+    selectron('nav#toc');
+    selectron('nav#toc > ol', 1);
+    selectron('nav#toc > ol ol', 3);
+    selectron('nav#toc li', 7);
+    selectron('nav#toc > h2', 'Table of Contents');
+    selectron('nav#toc > ol > li:nth-of-type(3) > ol > li', /Renested/);
+    selectron('nav#toc > ol > li:nth-of-type(3) > ol > li > a[href="#renested"] > bdo.secno', '3.1 ');
   });
 });
 
