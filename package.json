@@ -8,10 +8,14 @@
   "scripts": {
     "watch": "concurrently --handle-input npm:watch-md npm:watch-css",
     "watch-md": "npx @11ty/eleventy --serve --port=8023 --config=.eleventy.cjs",
-    "watch-css": "NODE_ENV=production cssn -w static/ipseity.css static/ipseity.min.css",
+    "watch-css": "concurrently --handle-input npm:watch-css-ips npm:watch-css-idx",
+    "watch-css-ips": "NODE_ENV=production cssn -w static/ipseity.css static/ipseity.min.css",
+    "watch-css-idx": "NODE_ENV=production cssn -w static/index.css static/index.min.css",
     "build": "npm run build-css && npm run build-md",
     "build-md": "npx @11ty/eleventy --config=.eleventy.cjs",
-    "build-css": "NODE_ENV=production cssn static/ipseity.css static/ipseity.min.css",
+    "build-css": "npm run build-css-ips && npm run build-css-idx",
+    "build-css-ips": "NODE_ENV=production cssn static/ipseity.css static/ipseity.min.css",
+    "build-css-idx": "NODE_ENV=production cssn static/index.css static/index.min.css",
     "test": "mocha"
   },
   "mocha": {
