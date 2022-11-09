@@ -12,7 +12,7 @@
     - [x] HTML output via JS with some simple HTML templating + post-processing
 - [x] example spec entry that works in the output
 - [x] command to watch
-- [ ] index for the site
+- [x] index for the site
 - [ ] Features
     - [ ] Parse metadata
     - [ ] List editors
@@ -33,7 +33,7 @@
 
 - [x] early tests
 - [ ] Start setting up the structure of the spec space
-    - [ ] We need a `meta` section, with specs-for-specs notably
+    - [x] We need a `meta` section, with specs-for-specs notably
     - [ ] Test protocol spec: the way in which the test runners are expected to run in all implemetations
 
 ## For The Specs

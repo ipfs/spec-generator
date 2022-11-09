@@ -1,3 +1,13 @@
+---
+editors:
+    - Robin Berjon:
+        gh: darobin
+        email: robin@berjon.com
+        url: https://berjon.com/
+        company:
+            name: Protocol Labs
+            url: https://protocol.ai/
+---
 
 # Spec for Specs
 

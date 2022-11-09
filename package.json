@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "watch": "concurrently --handle-input npm:watch-md npm:watch-css",
-    "watch-md": "npx @11ty/eleventy --serve --port=8023 --config=.eleventy.cjs",
+    "watch-md": "nodemon ./node_modules/.bin/eleventy -- --serve --port=8023 --config=.eleventy.cjs",
     "watch-css": "concurrently --handle-input npm:watch-css-ips npm:watch-css-idx",
     "watch-css-ips": "NODE_ENV=production cssn -w static/ipseity.css static/ipseity.min.css",
     "watch-css-idx": "NODE_ENV=production cssn -w static/index.css static/index.min.css",
