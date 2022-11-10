@@ -26,6 +26,10 @@
   --highlight-colour: rgb(26, 83, 217);
   --highlight-colour-faded: rgba(26, 83, 217, 0.5);
   --secondary-highlight: rgb(60, 207, 135);
+  --issue-colour: red;
+  --warning-colour: darkorange;
+  --example-colour: #666;
+  --note-colour: var(--secondary-highlight);
 }
 
 html {

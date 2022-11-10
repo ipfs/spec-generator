@@ -116,3 +116,32 @@ body:not(.toc-inline) :not(li) > .toc {
   text-decoration: none;
   color: var(--secondary-highlight);
 }
+
+pre {
+  background: #eee;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+div.issue, div.warning, div.note, div.example {
+  border-left: 0.4rem solid;
+  padding-left: 0.6rem;
+  position: relative;
+}
+div.issue { border-color: var(--issue-colour); }
+div.warning { border-color: var(--warning-colour); }
+div.note { border-color: var(--note-colour); }
+div.example { border-color: var(--example-colour); }
+div.issue::before, div.warning::before, div.note::before, div.example::before {
+  display: block;
+  position: absolute;
+  left: -2rem;
+  font-size: 0.8rem;
+  writing-mode: sideways-lr;
+  white-space: nowrap;
+}
+div.issue::before { content: "issue 🚧"; }
+div.warning::before { content: "warning ⚠️"; }
+div.note::before { content: "note 📔"; }
+div.example::before { content: "eg. 🐈"; }
