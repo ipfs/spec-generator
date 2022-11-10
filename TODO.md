@@ -14,9 +14,8 @@
 - [x] command to watch
 - [x] index for the site
 - [ ] Features
-    - [ ] Parse metadata
-    - [ ] List editors
-    - [ ] GitHub source
+    - [x] Parse metadata
+    - [x] List editors
     - [ ] Issues (use :: directives)
     - [ ] Notes
     - [ ] Definitions
@@ -27,6 +26,7 @@
     - [ ] look up locally first
     - [ ] look up on SpecRef
     - [ ] same for xref
+    - [ ] Specs write their own metadata to local refs (same for definitions)
 - [x] eliminate leftovers from previous approach
 - [x] command to build
 - [ ] look at Fleek hosting (test run myself before doing the real thing)

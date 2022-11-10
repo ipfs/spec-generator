@@ -19,6 +19,19 @@ body {
 header {
   margin-bottom: 4rem;
 }
+header dt {
+  font-weight: 300;
+}
+header dd img {
+  opacity: 0.5;
+  transition: opacity .5s;
+}
+header dd img:hover {
+  opacity: 1;
+}
+header dd a {
+  text-decoration: none;
+}
 
 h1 {
   font-family: var(--heading-family);
