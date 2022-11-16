@@ -82,7 +82,8 @@ And the code for it is:
 ```md
 :::note
 
-Really, you want to pay attention to these things, because they kind of tend to matter, you know.
+Really, you want to pay attention to these things, because they kind of tend to matter,
+you know.
 
 :::
 ```
@@ -105,11 +106,18 @@ And then it's just `document.getElementById('foo')`.
 :::
 ```
 
-
 ## References
 
 tk
 
 ## Definitions
 
-tk
+A :dfn[definition]{also="dfn,def"} is a key concept in a specification that can be referenced from other parts of the
+spec or in other specs. The definition is created with a `:dfn[defined term]` directive. Some definitions can benefit
+from having synonyms, and these can be specified as a comma-separated list with an `also` attribute as in
+`:dfn[defined term]{also="term, def"}`.
+
+Once a :ref[definition] has been created, it can be referenced with `:ref[definition]`. This includes the synonyms it
+was givem, for instance :ref[def].
+
+Plurals are handled for you (for English-language specs), so that you can reference :ref[definitions] without trouble.

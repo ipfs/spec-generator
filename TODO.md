@@ -16,12 +16,16 @@
 - [ ] Features
     - [x] Parse metadata
     - [x] List editors
-    - [ ] Issues (use :: directives)
-    - [ ] Notes
+    - [x] Issues (use :: directives)
+    - [x] Notes
     - [ ] Definitions
+        :dfn[]
+        :cite[]
+        :ref[]
     - [ ] Definition references
     - [ ] PR mode
     - [ ] Multiformat metadata (some hover thing)
+    - [ ] MUST, etc.
 - [ ] references system:
     - [ ] look up locally first
     - [ ] look up on SpecRef
@@ -37,6 +41,9 @@
     - [ ] Test protocol spec: the way in which the test runners are expected to run in all implemetations
 
 ## For The Specs
+
+* The stuff Mauve wants
+* We need our own wpc.guide
 
 From @aschmahmann:
 * Overall problem:

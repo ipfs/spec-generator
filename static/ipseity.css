@@ -1,5 +1,6 @@
 
 @import url(core.css);
+@import 'prismjs/themes/prism-coy.css';
 
 body {
   max-width: var(--max-readable-width);
@@ -117,11 +118,19 @@ body:not(.toc-inline) :not(li) > .toc {
   color: var(--secondary-highlight);
 }
 
-pre {
-  background: #eee;
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: 100;
+dfn {
+  font-weight: bolder;
+}
+
+/* override Prism */
+pre[class*="language-"]::before, pre[class*="language-"]::after {
+  box-shadow: none;
+}
+pre[class*="language-"] > code {
+  border-left-width: 0.4rem;
+}
+code, kbd, samp, pre[class*="language-"] > code {
+  font-size: 0.9rem;
 }
 
 div.issue, div.warning, div.note, div.example {
