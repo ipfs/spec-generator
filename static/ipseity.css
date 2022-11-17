@@ -43,6 +43,9 @@ h1 {
 h2 {
   font-size: 1.4rem;
 }
+h3 {
+  font-size: 1.2rem;
+}
 h2, h3, h4, h5, h6 {
   margin-top: 3rem;
 }
@@ -52,11 +55,20 @@ p#last-modified {
   font-size: 1.6rem;
 }
 
+p {
+  margin: 1rem 0;
+}
+
 a {
   color: var(--highlight-colour);
 }
 a.bibref {
   text-decoration: none;
+}
+
+em.rfc2119 {
+  font-variant: small-caps;
+  text-transform: lowercase;
 }
 
 .toc, .toc ol, .toc ul, .toc li {
@@ -171,13 +183,18 @@ div.example::before { content: "eg. 🐈"; }
   right: 1rem;
   font-size: 0.9rem;
 }
+#ipseity-reports details[open] {
+  background: #fff;
+}
 #ipseity-reports summary {
-  display: inline-block;
   font-weight: bold;
   color: #fff;
   border-radius: 0.2rem;
   padding: 0.2rem 0.4rem;
   cursor: pointer;
+}
+#ipseity-reports details:not([open]) summary::marker {
+  content: "";
 }
 #ipseity-reports .ipseity-errors summary {
   background-color: red;

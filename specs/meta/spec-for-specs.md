@@ -6,12 +6,12 @@ editors:
       github: darobin
       twitter: robinberjon
       mastodon: "@robin@mastodon.social"
-      company:
+      affiliation:
           name: Protocol Labs
           url: https://protocol.ai/
 xref:
-  - html
   - dom
+  - test-methodology
 ---
 
 # Spec for Specs
@@ -21,19 +21,110 @@ the interplanetary stack.
 
 ## Structure
 
-tk
+Interplanetary specs are designed to be easy to write and maintain while still providing support for
+document production features expected from Internet standards. A :dfn[spec] is a Markdown document enriched
+with a small number of additional directives (a deliberate goal being to avoid the proliferation of
+ad hoc syntax) and a specialised processor that knows how to resolve and extract metadata that is
+useful to support rich interlinking in a standards suite.
 
-## Metadata
+The name of the Markdown file matters, because it will be used as the :ref[spec]'s :ref[shortname].
+The :dfn[shortname] of a :ref[spec] is the key identifier that is used to refer to it when citing that
+:ref[spec] or importing its definitions. The :ref[shortname] for this :ref[spec] is `spec-for-specs`
+which means that you can cite it using `:cite[spec-for-specs]` which comes out as :cite[spec-for-specs]
+(a :ref[spec] citing itself is not all that useful, really, but you can *also* do it from other
+:ref[specs], which is kind of the point). The :ref[shortname] SHOULD be unique inside interplanetary
+:ref[specs], and ideally in the entirety of the relevant standards universe, though that can at times
+prove challenging.
 
-tk
+### Frontmatter
+
+A :ref[spec] MUST being with :ref[frontmatter]. :dfn[Frontmatter] is a preamble to the document placed
+right at the start, delimited with `---` and containing YAML data (:cite[YAML]). The :ref[frontmatter]
+for this :ref[spec] looks like this:
+
+```yaml
+---
+editors:
+    - name: Robin Berjon
+      email: robin@berjon.com
+      url: https://berjon.com/
+      github: darobin
+      twitter: robinberjon
+      mastodon: "@robin@mastodon.social"
+      affiliation:
+          name: Protocol Labs
+          url: https://protocol.ai/
+xref:
+  - dom
+  - test-methodology
+---
+```
+
+The :ref[frontmatter] MUST contain an `editors` field, which is an array of objects describing people
+who are responsible for editing this given :ref[spec]. The `editors` field MUST contain at least one
+person. The fields that describe a person are `name`, `email`, `url`, `github`, `twitter`, `mastodon`,
+and `affiliation` which is in turn an object with fields `name` and `url`. Each person as well as the
+affiliation MUST have a `name`; every other field is OPTIONAL.
+
+The `xref` field exemplified above is described in the [references](#refs) section.
+
+### Title & Sections
+
+A :ref[spec] MUST have a title, which is to say an `h1` heading (`# Some Title` in Markdown). It also
+SHOULD have only one such title (every other heading should be `h2` or more) and have the title right
+after the :ref[frontmatter]. The behaviour of multiple titles or titles positioned at random places in
+the :ref[spec] is undefined and has been shown to disappoint kittens under experimental conditions.
+
+Sections in a :ref[spec] are nested by using various heading depths. Note that nesting levels are
+enforced automatically. If for instance you have an `h5` following an `h2`, it will be promoted to an
+`h3` (recursively if it had nested `h6`s of its own).
+
+Sections automatically get an identifier based on their heading. This is convenient, but it can cause
+broken links when the section heading changes. If you wish to specify your own ID for a section you can
+do so by appending `{#your-id}` to the heading, like so:
+
+```md
+### My Cool Section {#cool}
+```
 
 ## Testable Assertions
 
 Specifications SHOULD make use of :cite[RFC2119] keywords such as MUST or MUST NOT in order to express
 conformance expectations as testable assertions.
 
+All you need to do to avail yourself of these keywords is to type them in all caps, no markup required.
+Additionally, if you use one the processor will automatically add a reference to :cite[RFC2119]. The
+available RFC2119 keywords are:
 
-## Special Constructs
+* MUST
+* MUST NOT
+* SHOULD
+* SHOULD NOT
+* SHALL
+* SHALL NOT
+* MAY
+* REQUIRED
+* NOT REQUIRED
+* RECOMMENDED
+* NOT RECOMMENDED
+* OPTIONAL
+
+It is probably a bad idea to use the SHALL variants, and generally it is best to stick to MUST, SHOULD, MAY,
+and their negations. In an ideal world, a :ref[spec] would stick to only using MUST and MUST NOT because
+optionality in standards is harmful. In practice, however, some flexibilty can prove necessary.
+
+:::note
+
+I highly recommend reading [*A Method for Writing Testable Conformance Requirements*](https://www.w3.org/TR/test-methodology/)
+(:cite[test-methodology]). Hidden behind that fanciful, almost enticingly romantic title is a treasure trove
+of advice in writing good specification language. The core tenet of that document is simple: a good :ref[spec]
+is a testable one, because tests are the empirical ground truth of interoperability. And in order to make a
+:ref[spec] testable, it needs to be built from :ref[testable assertions] and there is an art to writing those
+effectively, which includes the judicious application of RFC2119 keywords.
+
+:::
+
+## Special Blocks
 
 A number of additional structural constructs are available to capture common blocks that are
 useful in specs: issues, warnings, notes, and examples.
@@ -124,7 +215,7 @@ from having synonyms, and these can be specified as a comma-separated list with 
 
 Plurals are handled for you (for English-language specs), so that you can reference :ref[definitions] without trouble.
 
-## References
+## References {#refs}
 
 There are two primary types of references: to definitions and to full documents (comparable to academic citations).
 
@@ -136,7 +227,6 @@ in the `xref` section of the YAML :ref[frontmatter]:
 
 ```yaml
 xref:
-  - html
   - dom
   - spec-for-specs
 ```

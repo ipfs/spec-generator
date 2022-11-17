@@ -1,24 +1,10 @@
 
 # TODO
 
-- [x] Features
-    - [x] Parse metadata
-    - [x] List editors
-    - [x] Issues (use :: directives)
-    - [x] Notes
-    - [x] Definitions
-        - [x] :dfn[]
-        - [x] :cite[]
-        - [x] :ref[]
-    - [x] Definition references
-    - [x] MUST, etc.
-    - [x] render errors
-- [x] eliminate leftovers from previous approach
-- [x] command to build
 - [ ] Spec for Specs needs to be written
 - [ ] look at Fleek hosting (test run myself before doing the real thing)
+- [ ] Mobile
 
-- [x] early tests
 - [ ] Start setting up the structure of the spec space
     - [x] We need a `meta` section, with specs-for-specs notably
     - [ ] Test protocol spec: the way in which the test runners are expected to run in all implemetations

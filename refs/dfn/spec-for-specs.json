@@ -1,4 +1,10 @@
 {
+  "spec": "#dfn-spec",
+  "specs": "#dfn-spec",
+  "shortname": "#dfn-shortname",
+  "shortnames": "#dfn-shortname",
+  "frontmatter": "#dfn-Frontmatter",
+  "frontmatters": "#dfn-Frontmatter",
   "definition": "#dfn-definition",
   "dfn": "#dfn-definition",
   "def": "#dfn-definition",
