@@ -27,6 +27,12 @@ tk
 
 tk
 
+## Testable Assertions
+
+Specifications SHOULD make use of :cite[RFC2119] keywords such as MUST or MUST NOT in order to express
+conformance expectations as testable assertions.
+
+
 ## Special Constructs
 
 A number of additional structural constructs are available to capture common blocks that are
