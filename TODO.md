@@ -1,9 +1,10 @@
 
 # TODO
 
-- [ ] Spec for Specs needs to be written
+- [x] Spec for Specs needs to be written
 - [ ] look at Fleek hosting (test run myself before doing the real thing)
 - [ ] Mobile
+- [ ] Print
 
 - [ ] Start setting up the structure of the spec space
     - [x] We need a `meta` section, with specs-for-specs notably

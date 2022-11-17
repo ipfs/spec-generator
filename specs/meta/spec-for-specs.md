@@ -206,6 +206,9 @@ And then it's just `document.getElementById('foo')`.
 :::
 ```
 
+When including code, the best option is to specify the code's language as part of the code fence. This enables Prism to
+kick in and to carry out syntax highlighting.
+
 ## Definitions
 
 A :dfn[definition]{also="dfn,def"} is a key concept in a specification that can be referenced from other parts of the
@@ -217,12 +220,15 @@ Plurals are handled for you (for English-language specs), so that you can refere
 
 ## References {#refs}
 
-There are two primary types of references: to definitions and to full documents (comparable to academic citations).
+### Definitions
+
+There are two primary types of references: to :ref[definitions] and to full documents that get added to the spec's
+bibliographic references section.
 
 Once a :ref[definition] has been created, it can be referenced with `:ref[definition]`. This includes the synonyms it
 was givem, for instance :ref[def].
 
-It's also possible to reference definitions in other specs by importing those other specs by referencing their :ref[shortnames]
+It's also possible to reference definitions from other specs by importing those other specs by referencing their :ref[shortnames]
 in the `xref` section of the YAML :ref[frontmatter]:
 
 ```yaml
@@ -231,8 +237,24 @@ xref:
   - spec-for-specs
 ```
 
+Definitions are automatically extracted from each interplanetary :ref[spec] and stored in the same repository, under
+`refs/dfn`. You can grep in there to find what you need to import if you are unsure which :ref[spec] defines a given
+term. For :ref[specs] from the broader standards universe, you can use the [xref tool](https://respec.org/xref/) that
+is part of [ReSpec](https://respec.org/) to look them up. Definition from any spec in the
+[xref tool](https://respec.org/xref/) can be imported and used in an interplanetary :ref[spec]. This typically covers
+definitions from the W3C, IETF, WHATWG, ECMA TC39, the Khronos Group, Unicode, and an assortment of others.
+
 Once that's done, you can reference, say, the DOM concept of :ref[element] with just `:ref[element]` as if it were
 defined locally.
 
+### Bibliographic
+
 Citing specs or more generally documents like :cite[html], :cite[rfc8890], :cite[privacy-principles], or :cite[spec-for-specs]
-is accomplished using the shortname in a `:cite[shortname]` block, as in `:cite[html], :cite[rfc8890], :cite[privacy-principles], or :cite[spec-for-specs]`.
+is accomplished using the shortname in a
+`:cite[shortname]` block, as in `:cite[html], :cite[rfc8890], :cite[privacy-principles], or :cite[spec-for-specs]`. The idea
+is to use this mechanism to easily provide context when you are referring to notions defined in another document but not
+specifically a :ref[definition] in particular.
+
+Simply by citing a given document it will be added to the bibliographic reference section that is automatically generated
+at the end of your :ref[spec]. You can use any :ref[shortname] listed in [Specref](https://www.specref.org/) (there are
+over 50k docs there) as well as any :ref[shortname] from the interplanetary space.
