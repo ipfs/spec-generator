@@ -9,6 +9,9 @@ editors:
       company:
           name: Protocol Labs
           url: https://protocol.ai/
+xref:
+  - html
+  - dom
 ---
 
 # Spec for Specs
@@ -106,10 +109,6 @@ And then it's just `document.getElementById('foo')`.
 :::
 ```
 
-## References
-
-tk
-
 ## Definitions
 
 A :dfn[definition]{also="dfn,def"} is a key concept in a specification that can be referenced from other parts of the
@@ -117,7 +116,27 @@ spec or in other specs. The definition is created with a `:dfn[defined term]` di
 from having synonyms, and these can be specified as a comma-separated list with an `also` attribute as in
 `:dfn[defined term]{also="term, def"}`.
 
+Plurals are handled for you (for English-language specs), so that you can reference :ref[definitions] without trouble.
+
+## References
+
+There are two primary types of references: to definitions and to full documents (comparable to academic citations).
+
 Once a :ref[definition] has been created, it can be referenced with `:ref[definition]`. This includes the synonyms it
 was givem, for instance :ref[def].
 
-Plurals are handled for you (for English-language specs), so that you can reference :ref[definitions] without trouble.
+It's also possible to reference definitions in other specs by importing those other specs by referencing their :ref[shortnames]
+in the `xref` section of the YAML :ref[frontmatter]:
+
+```yaml
+xref:
+  - html
+  - dom
+  - spec-for-specs
+```
+
+Once that's done, you can reference, say, the DOM concept of :ref[element] with just `:ref[element]` as if it were
+defined locally.
+
+Citing specs or more generally documents like :cite[html], :cite[rfc8890], :cite[privacy-principles], or :cite[spec-for-specs]
+is accomplished using the shortname in a `:cite[shortname]` block, as in `:cite[html], :cite[rfc8890], :cite[privacy-principles], or :cite[spec-for-specs]`.
