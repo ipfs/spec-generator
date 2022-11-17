@@ -1,18 +1,6 @@
 
 # TODO
 
-- [x] install 11ty
-- [x] output dir (not version controlled)
-- [x] set up minimal config
-- [x] setup static copy
-- [x] setup CSS build step
-- [x] spec source dir
-- [x] integrating our transformation code
-    - [x] MD transformation as a plugin basically like this https://github.com/florianeckerstorfer/eleventy-plugin-remark/blob/main/src/eleventyRemark.js
-    - [x] HTML output via JS with some simple HTML templating + post-processing
-- [x] example spec entry that works in the output
-- [x] command to watch
-- [x] index for the site
 - [ ] Features
     - [x] Parse metadata
     - [x] List editors
@@ -24,14 +12,10 @@
         - [x] :ref[]
     - [x] Definition references
     - [ ] MUST, etc.
-    - [ ] render errors
-- [x] references system:
-    - [x] look up locally first
-    - [x] look up on SpecRef
-    - [x] same for xref
-    - [x] Specs write their own metadata to local refs (same for definitions)
+    - [x] render errors
 - [x] eliminate leftovers from previous approach
 - [x] command to build
+- [ ] Spec for Specs needs to be written
 - [ ] look at Fleek hosting (test run myself before doing the real thing)
 
 - [x] early tests
@@ -42,6 +26,8 @@
 ## Next
 - [ ] PR mode: generate PRs to prXXX.specs.ipfs.tech
 - [ ] Multiformat metadata (some hover thing that shows detail for embedded MFs)
+- [ ] lint mode (reporting errors out rather than to the spec)
+- [ ] a lot more tests
 
 ## For The Specs
 

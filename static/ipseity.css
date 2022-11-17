@@ -43,6 +43,9 @@ h1 {
 h2 {
   font-size: 1.4rem;
 }
+h2, h3, h4, h5, h6 {
+  margin-top: 3rem;
+}
 p#last-modified {
   color: var(--highlight-colour);
   margin-top: -1rem;
@@ -160,4 +163,25 @@ div.example::before { content: "eg. 🐈"; }
 
 .bibliography dt {
   font-weight: bold;
+}
+
+#ipseity-reports {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+}
+#ipseity-reports summary {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+}
+#ipseity-reports .ipseity-errors summary {
+  background-color: red;
+}
+#ipseity-reports .ipseity-warnings summary {
+  background-color: orange;
 }
