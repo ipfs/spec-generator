@@ -1,7 +1,7 @@
 
 # TODO
 
-- [ ] Features
+- [x] Features
     - [x] Parse metadata
     - [x] List editors
     - [x] Issues (use :: directives)
@@ -11,7 +11,7 @@
         - [x] :cite[]
         - [x] :ref[]
     - [x] Definition references
-    - [ ] MUST, etc.
+    - [x] MUST, etc.
     - [x] render errors
 - [x] eliminate leftovers from previous approach
 - [x] command to build
