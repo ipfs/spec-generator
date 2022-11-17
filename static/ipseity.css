@@ -52,6 +52,9 @@ p#last-modified {
 a {
   color: var(--highlight-colour);
 }
+a.bibref {
+  text-decoration: none;
+}
 
 .toc, .toc ol, .toc ul, .toc li {
   line-height: 1.1em;
@@ -154,3 +157,7 @@ div.issue::before { content: "issue 🚧"; }
 div.warning::before { content: "warning ⚠️"; }
 div.note::before { content: "note 📔"; }
 div.example::before { content: "eg. 🐈"; }
+
+.bibliography dt {
+  font-weight: bold;
+}

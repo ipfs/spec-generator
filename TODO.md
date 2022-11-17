@@ -18,19 +18,18 @@
     - [x] List editors
     - [x] Issues (use :: directives)
     - [x] Notes
-    - [ ] Definitions
-        :dfn[]
-        :cite[]
-        :ref[]
-    - [ ] Definition references
-    - [ ] PR mode
-    - [ ] Multiformat metadata (some hover thing)
+    - [x] Definitions
+        - [x] :dfn[]
+        - [x] :cite[]
+        - [x] :ref[]
+    - [x] Definition references
     - [ ] MUST, etc.
-- [ ] references system:
-    - [ ] look up locally first
-    - [ ] look up on SpecRef
-    - [ ] same for xref
-    - [ ] Specs write their own metadata to local refs (same for definitions)
+    - [ ] render errors
+- [x] references system:
+    - [x] look up locally first
+    - [x] look up on SpecRef
+    - [x] same for xref
+    - [x] Specs write their own metadata to local refs (same for definitions)
 - [x] eliminate leftovers from previous approach
 - [x] command to build
 - [ ] look at Fleek hosting (test run myself before doing the real thing)
@@ -39,6 +38,10 @@
 - [ ] Start setting up the structure of the spec space
     - [x] We need a `meta` section, with specs-for-specs notably
     - [ ] Test protocol spec: the way in which the test runners are expected to run in all implemetations
+
+## Next
+- [ ] PR mode: generate PRs to prXXX.specs.ipfs.tech
+- [ ] Multiformat metadata (some hover thing that shows detail for embedded MFs)
 
 ## For The Specs
 

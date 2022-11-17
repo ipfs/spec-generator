@@ -1,20 +1,9 @@
 {
   "title": "Spec for Specs",
-  "editors": [
-    {
-      "name": "Robin Berjon",
-      "email": "robin@berjon.com",
-      "url": "https://berjon.com/",
-      "github": "darobin",
-      "twitter": "robinberjon",
-      "mastodon": "@robin@mastodon.social",
-      "company": {
-        "name": "Protocol Labs",
-        "url": "https://protocol.ai/"
-      }
-    }
+  "authors": [
+    "Robin Berjon"
   ],
-  "lastModified": "2022-11-08T20:34:51.171Z",
+  "date": "2022-11-08",
   "shortName": "spec-for-specs",
-  "url": "https://specs.ipfs.tech/meta/spec-for-specs/"
+  "href": "https://specs.ipfs.tech/meta/spec-for-specs/"
 }
