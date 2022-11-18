@@ -17,7 +17,7 @@
     "build-css-ips": "NODE_ENV=production npx cssn static/ipseity.css static/ipseity.min.css",
     "build-css-idx": "NODE_ENV=production npx cssn static/index.css static/index.min.css",
     "postinstall": "npm run get-webref",
-    "get-webref": "git submodule add https://github.com/w3c/webref.git refs/webref && git submodule update",
+    "get-webref": "prepare.sh",
     "test": "mocha"
   },
   "mocha": {
