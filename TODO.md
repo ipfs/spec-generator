@@ -7,7 +7,7 @@
 - [x] Print
 - [x] dark mode
 - [x] nav to root
-- [ ] refactor
+- [x] refactor
 
 - [ ] Start setting up the structure of the spec space
     - [x] We need a `meta` section, with specs-for-specs notably
