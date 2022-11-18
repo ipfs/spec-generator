@@ -19,19 +19,32 @@
 
 :root {
   --bg: #fff;
+  --fg: #000;
   --max-readable-width: 50rem;
   --heading-family: Catamaran, sans-serif;
   --body-family: Mulish, sans-serif;
-  --text-colour: #000;
   --highlight-colour: rgb(26, 83, 217);
   --highlight-colour-faded: rgba(26, 83, 217, 0.5);
   --secondary-highlight: rgb(60, 207, 135);
+  --link-colour: var(--highlight-colour);
   --issue-colour: red;
   --warning-colour: darkorange;
   --example-colour: #666;
   --note-colour: var(--secondary-highlight);
+  --standard-gradient: linear-gradient(to right, var(--highlight-colour), var(--secondary-highlight));
+  --contrast-bg: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000;
+    --fg: #fff;
+    --link-colour: var(--secondary-highlight);
+    --contrast-bg: var(--fg);
+  }
 }
 
 html {
   background: var(--bg);
+  color: var(--fg);
 }

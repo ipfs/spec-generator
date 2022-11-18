@@ -5,19 +5,30 @@
 body {
   max-width: var(--max-readable-width);
   margin: 0 auto;
-  padding: 1rem 0 0 0;
-  background-image: url(ipfs-standards.svg);
-  background-repeat: no-repeat;
-  background-size: 100px;
-  background-position-x: right;
-  background-position-y: 1rem;
+  padding: 0 0 0 0;
   font-size: 1.25rem;
   line-height: 1.5;
   font-family: var(--body-family);
   font-weight: 300;
 }
 
+#ipseity-back-to-root {
+  margin-bottom: 2rem;
+  background: var(--standard-gradient);
+  padding-left: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+#ipseity-back-to-root a {
+  color: #fff;
+  text-decoration: none;
+}
+
 header {
+  background-image: url(ipfs-standards.svg);
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position-x: right;
   margin-bottom: 4rem;
 }
 header dt {
@@ -26,6 +37,8 @@ header dt {
 header dd img {
   opacity: 0.5;
   transition: opacity .5s;
+  background: var(--contrast-bg);
+  border-radius: 2px;
 }
 header dd img:hover {
   opacity: 1;
@@ -53,7 +66,7 @@ h2, h3, h4, h5, h6 {
   margin-top: 1rem;
 }
 p#last-modified {
-  color: var(--highlight-colour);
+  color: var(--link-colour);
   margin-top: -1rem;
   font-size: 1.6rem;
 }
@@ -63,7 +76,7 @@ p {
 }
 
 a {
-  color: var(--highlight-colour);
+  color: var(--link-colour);
 }
 a.bibref {
   text-decoration: none;
@@ -97,10 +110,10 @@ em.rfc2119 {
   padding: 0.1rem 1px 0;
   display: block;
   text-decoration: none;
-  color: var(--text-colour);
+  color: var(--fg);
 }
 .toc a:hover, .toc a:focus {
-  color: var(--highlight-colour);
+  color: var(--link-colour);
 }
 #toc .toc .secno {
   margin-left: -4rem;
@@ -129,6 +142,10 @@ body:not(.toc-inline) :not(li) > .toc {
   left: -1.1em;
   font-size: 1rem;
   opacity: .5;
+  transition: opacity .5s;
+}
+:is(h2, h3, h4, h5, h6) + a.self-link:hover {
+  opacity: 1;
 }
 :is(h2, h3) + a.self-link {
   top: -.2em;
@@ -187,7 +204,7 @@ div.example::before { content: "eg. 🐈"; }
   font-size: 0.9rem;
 }
 #ipseity-reports details[open] {
-  background: #fff;
+  background: var(--bg);
   border-bottom: 1px solid #666;
 }
 #ipseity-reports summary {
@@ -212,6 +229,8 @@ div.example::before { content: "eg. 🐈"; }
     margin-left: 2rem;
     margin-right: 1rem;
     font-size: 1rem;
+  }
+  header {
     background-size: 50px;
   }
   h1 {

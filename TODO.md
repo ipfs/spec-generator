@@ -5,6 +5,9 @@
 - [ ] look at Fleek hosting (test run myself before doing the real thing)
 - [x] Mobile
 - [x] Print
+- [x] dark mode
+- [x] nav to root
+- [ ] refactor
 
 - [ ] Start setting up the structure of the spec space
     - [x] We need a `meta` section, with specs-for-specs notably
