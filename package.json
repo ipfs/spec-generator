@@ -11,7 +11,7 @@
     "watch-css": "concurrently --handle-input npm:watch-css-ips npm:watch-css-idx",
     "watch-css-ips": "NODE_ENV=production npx cssn -w static/ipseity.css static/ipseity.min.css",
     "watch-css-idx": "NODE_ENV=production npx cssn -w static/index.css static/index.min.css",
-    "build": "npm run build-md",
+    "build": "npm run build-css && npm run build-md",
     "build-md": "npx @11ty/eleventy --config=.eleventy.cjs",
     "build-css": "npm run build-css-ips && npm run build-css-idx",
     "build-css-ips": "NODE_ENV=production npx cssn static/ipseity.css static/ipseity.min.css",
