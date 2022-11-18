@@ -3,14 +3,15 @@
 
 - [x] Spec for Specs needs to be written
 - [ ] look at Fleek hosting (test run myself before doing the real thing)
-- [ ] Mobile
-- [ ] Print
+- [x] Mobile
+- [x] Print
 
 - [ ] Start setting up the structure of the spec space
     - [x] We need a `meta` section, with specs-for-specs notably
     - [ ] Test protocol spec: the way in which the test runners are expected to run in all implemetations
 
 ## Next
+- [ ] integrate IPIP
 - [ ] PR mode: generate PRs to prXXX.specs.ipfs.tech
 - [ ] Multiformat metadata (some hover thing that shows detail for embedded MFs)
 - [ ] lint mode (reporting errors out rather than to the spec)

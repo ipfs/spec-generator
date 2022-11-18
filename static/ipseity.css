@@ -188,6 +188,7 @@ div.example::before { content: "eg. 🐈"; }
 }
 #ipseity-reports details[open] {
   background: #fff;
+  border-bottom: 1px solid #666;
 }
 #ipseity-reports summary {
   font-weight: bold;
@@ -204,4 +205,42 @@ div.example::before { content: "eg. 🐈"; }
 }
 #ipseity-reports .ipseity-warnings summary {
   background-color: orange;
+}
+
+@media only screen and (max-width: 816px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    background-size: 50px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p#last-modified {
+    margin-top: -0.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media print {
+  body {
+    font-size: 1rem;
+  }
+  .self-link {
+    display: none;
+  }
+  h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  :is(h2, h3, h4, h5, h6):not(#toc > h2) {
+    left: 0;
+  }
+  pre[class*="language-"] > code {
+    background-image: none;
+  }
+  #back-to-top, #ipseity-reports {
+    display: none;
+  }
 }
