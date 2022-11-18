@@ -16,6 +16,8 @@
     "build-css": "npm run build-css-ips && npm run build-css-idx",
     "build-css-ips": "NODE_ENV=production npx cssn static/ipseity.css static/ipseity.min.css",
     "build-css-idx": "NODE_ENV=production npx cssn static/index.css static/index.min.css",
+    "postinstall": "npm run get-webref",
+    "get-webref": "git submodule add https://github.com/w3c/webref.git refs/webref && git submodule update",
     "test": "mocha"
   },
   "mocha": {
@@ -69,7 +71,6 @@
     "respec": "^32.3.0",
     "selectron-test": "^2.0.0",
     "specref": "github:tobie/specref",
-    "unist-util-visit": "^4.1.1",
-    "webref": "github:w3c/webref"
+    "unist-util-visit": "^4.1.1"
   }
 }
