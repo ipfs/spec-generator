@@ -20,6 +20,13 @@
 - [ ] lint mode (reporting errors out rather than to the spec)
 - [ ] a lot more tests
 
+## Test Suite Todo
+- [x] create dir
+- [ ] port over a small number of the relevant gateway tests (block & car)
+- [ ] include a command to launch the daemon
+- [ ] basic runner that can run those tests and hit the daemon right
+- [ ] report to MD / JSON / HTML
+
 ## For The Specs
 
 * The stuff Mauve wants

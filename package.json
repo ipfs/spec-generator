@@ -20,6 +20,9 @@
     "get-webref": "./prepare.sh",
     "test": "mocha"
   },
+  "bin": {
+    "bastest": "./bin/bastest.js"
+  },
   "mocha": {
     "reporter": "spec",
     "bail": true
@@ -50,6 +53,8 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "axios": "^1.1.3",
+    "commander": "^9.4.1",
     "concurrently": "^7.5.0",
     "cssn": "^3.3.1",
     "eslint": "^8.27.0",
