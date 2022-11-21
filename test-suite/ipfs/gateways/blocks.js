@@ -24,12 +24,11 @@ describe('Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support', () =>
 
   // the gateways needs to be minimally writable in order to be testable
   before('Writing a raw block to the gateway', async () => {
-    const res = await ax.put('/ipfs/', {
+    const res = await ax.post('/ipfs/', {
       data: dirAsRawBlock,
       headers: { 'Content-Type': 'application/vnd.ipld.raw' },
       maxRedirects: 0,
     });
-    console.warn(JSON.stringify(res.headers, null, 2));
     ok(res.status < 400, 'Writing fixture was successful');
   });
 
@@ -96,7 +95,3 @@ describe('Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support', () =>
 //     test_expect_success "GET response for application/vnd.ipld.raw includes Cache-Control" '
 //     grep "< Cache-Control: public, max-age=29030400, immutable" curl_output
 //     '
-
-// test_kill_ipfs_daemon
-
-// test_done

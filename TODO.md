@@ -24,8 +24,11 @@
 - [x] create dir
 - [ ] port over a small number of the relevant gateway tests (block & car)
 - [ ] include a command to launch the daemon
-- [ ] basic runner that can run those tests and hit the daemon right
-- [ ] report to MD / JSON / HTML
+- [x] basic runner that can run those tests and hit the daemon right
+- [x] report to MD / JSON / HTML
+
+Run:
+ipfs daemon --writeable
 
 ## For The Specs
 
