@@ -1,31 +1,58 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 2,
-    "passes": 2,
+    "suites": 3,
+    "tests": 5,
+    "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2022-11-21T22:56:59.839Z",
-    "end": "2022-11-21T22:57:00.347Z",
-    "duration": 508
+    "start": "2022-11-21T23:26:13.297Z",
+    "end": "2022-11-21T23:26:13.680Z",
+    "duration": 383
   },
   "tests": [
     {
       "title": "GET with format=raw param returns a raw block",
       "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support GET unixfs dir root block and compare it with expected raw block GET with format=raw param returns a raw block",
       "file": "ipfs/gateways/blocks.js",
-      "duration": 294,
+      "duration": 26,
       "currentRetry": 0,
-      "speed": "slow",
+      "speed": "fast",
       "err": {}
     },
     {
       "title": "GET for application/vnd.ipld.raw returns a raw block",
       "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support GET unixfs dir root block and compare it with expected raw block GET for application/vnd.ipld.raw returns a raw block",
       "file": "ipfs/gateways/blocks.js",
-      "duration": 53,
+      "duration": 16,
       "currentRetry": 0,
-      "speed": "medium",
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "GET response for application/vnd.ipld.raw has expected response headers",
+      "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support Make sure expected HTTP headers are returned with the block bytes GET response for application/vnd.ipld.raw has expected response headers",
+      "file": "ipfs/gateways/blocks.js",
+      "duration": 24,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "GET for application/vnd.ipld.raw with query filename includes Content-Disposition with custom filename",
+      "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support Make sure expected HTTP headers are returned with the block bytes GET for application/vnd.ipld.raw with query filename includes Content-Disposition with custom filename",
+      "file": "ipfs/gateways/blocks.js",
+      "duration": 172,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "GET response for application/vnd.ipld.raw has expected caching headers",
+      "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support Make sure expected HTTP headers are returned with the block bytes GET response for application/vnd.ipld.raw has expected caching headers",
+      "file": "ipfs/gateways/blocks.js",
+      "duration": 109,
+      "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     }
   ],
@@ -36,18 +63,45 @@
       "title": "GET with format=raw param returns a raw block",
       "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support GET unixfs dir root block and compare it with expected raw block GET with format=raw param returns a raw block",
       "file": "ipfs/gateways/blocks.js",
-      "duration": 294,
+      "duration": 26,
       "currentRetry": 0,
-      "speed": "slow",
+      "speed": "fast",
       "err": {}
     },
     {
       "title": "GET for application/vnd.ipld.raw returns a raw block",
       "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support GET unixfs dir root block and compare it with expected raw block GET for application/vnd.ipld.raw returns a raw block",
       "file": "ipfs/gateways/blocks.js",
-      "duration": 53,
+      "duration": 16,
       "currentRetry": 0,
-      "speed": "medium",
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "GET response for application/vnd.ipld.raw has expected response headers",
+      "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support Make sure expected HTTP headers are returned with the block bytes GET response for application/vnd.ipld.raw has expected response headers",
+      "file": "ipfs/gateways/blocks.js",
+      "duration": 24,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "GET for application/vnd.ipld.raw with query filename includes Content-Disposition with custom filename",
+      "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support Make sure expected HTTP headers are returned with the block bytes GET for application/vnd.ipld.raw with query filename includes Content-Disposition with custom filename",
+      "file": "ipfs/gateways/blocks.js",
+      "duration": 172,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "GET response for application/vnd.ipld.raw has expected caching headers",
+      "fullTitle": "Test HTTP Gateway Raw Block (application/vnd.ipld.raw) Support Make sure expected HTTP headers are returned with the block bytes GET response for application/vnd.ipld.raw has expected caching headers",
+      "file": "ipfs/gateways/blocks.js",
+      "duration": 109,
+      "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     }
   ]
