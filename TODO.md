@@ -83,3 +83,17 @@ We need to cover those core primitives before moving into more advanced things.
 
 From Dietrich:
 * Look for small things that could be picked off to turn them into an IETF or W3C standard (eg. CIDs)
+
+
+<!--
+
+* Status of what MIT agrees has been collected of the $675K
+* The final asset transfer agreement, comprehensive from MIT
+* Latest AR aging report and collection
+* Status of the IRS filing.
+* The F2F is the time to be approving the standard financial instruments, for the direct operation of the W3C Inc.
+  office (the “ex-MIT” part) and the consortium as a whole.
+* Review of the monthly operating budget for MIT for 2023 (excluding any open positions indicated in the staffing plan).
+        Monthly Income Statement
+        Monthly Balance Sheet
+        Monthly Cashflow Statement -->
