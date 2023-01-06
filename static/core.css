@@ -170,8 +170,10 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
 
   --bg: var(--ipfs-off-white);
   --fg: var(--ipfs-text);
+  --stark-bg: #fff;
+  --stark-fg: #000;
   --max-readable-width: 50rem;
-  --max-page-width: 86rem;
+  --max-page-width: 82rem;
   --heading-family: var(--ipfs-sans-serif);
   --body-family: var(--ipfs-sans-serif);
   --highlight-colour: var(--ipfs-turquoise);
@@ -190,6 +192,8 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   :root {
     --bg: var(--ipfs-text);
     --fg: var(--ipfs-off-white);
+    --stark-bg: #000;
+    --stark-fg: #fff;
     --link-colour: var(--ipfs-yellow);
     --contrast-bg: var(--fg);
   }

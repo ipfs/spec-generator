@@ -19,87 +19,108 @@
     </div>
   </header>
   <main>
-    <p>
-      The purpose of <em>Interplanetary Standards</em> is to foster interoperability between
-      independent implementations of parts of the interplanetary stack (IPFS, IPLD, libp2p,
-      Multiformats) by producing:
+    <h2 class="pitch-title">Specifying the web of tomorrow.</h2>
+    <p class="pitch-subtitle">
+      The technology that powers the next evolution of the web is being standardized here.
     </p>
-    <ul>
-      <li>
-        <u>High-quality open standards</u> that fully defined implementation behaviour and empower
-        anyone to build their own system that fits into our broader ecosystem without needing
-        to reverse engineer the behaviour of other parts.
-      </li>
-      <li>
-        <u>Comprehensive test suites</u> that offer guarantees of correctness and are kept updated as
-        issues with implementations arise.
-      </li>
-      <li>
-        <u>Testing infrastructure</u> to support detecting interoperability issues in CI/CD and to
-        report on implementation maturity as the stack evolves.
-      </li>
-      <li>
-        <u>A governance model</u> that guarantees community ownership of the standards and the
-        standards-production process, in pursuit of efficient, transformative, ethical
-        technology.
-      </li>
-    </ul>
-    <p>
-      The specifications are broken up into multiple areas that cover the entirety of the stack. Each
-      area may have different governance arrangements so as to ensure that it runs in the way that is
-      the most appropriate for that community, but all must follow the governance set for the overall
-      project.
-    </p>
+    <div class="basic-grid">
+      <div class="pitch">
+        <h3>High-quality open standards</h3>
+        <p>
+          We aim to fully define implementation behaviour and to empower anyone to build their
+          own system that fits into the interplanetary ecosystem without needing to reverse-engineer
+          the behavior of other implementations.
+        </p>
+      </div>
+      <div class="pitch">
+        <h3>Comprehensive test suites</h3>
+        <p>
+          A specification is only as useful as it is both testable and tested. We are building extensive
+          test suites that allow specifications to prove their interoperability and implementations to demonstrate
+          their correctness.
+          </p>
+      </div>
+      <div class="pitch">
+        <h3>Testing infrastructure</h3>
+        <p>
+          We build tools to support detecting interoperability issues early and often as part of CI/CD pipelines
+          and to report on implementation maturity as the stack evolves so that people who build on top of the
+          interplanetary stack can know what they can use in production.
+        </p>
+      </div>
+      <div class="pitch">
+        <h3>An open governance model</h3>
+        <p>
+          We guarantee community ownership of the standards, of the standards-production process, and of
+          the infrastructure to operate it, in collective pursuit of efficient, transformative, ethical
+          technology.
+        </p>
+      </div>
+    </div>
+
     <section>
-      <h2>IPFS</h2>
+      <h2>Specifications</h2>
       <p>
-        <i>On the way…</i>
+        The specifications are broken up into multiple areas that cover the entirety of the stack. Each
+        area may have different governance arrangements so as to ensure that it runs in the way that is
+        the most appropriate for that community, but all must follow the governance set for the overall
+        project.
       </p>
+      <div class="basic-grid">
+        <section>
+          <h3>IPFS</h3>
+          <p>
+            <i>On the way…</i>
+          </p>
+        </section>
+        <section>
+          <h3>Meta</h3>
+          <p>
+            <em>Meta</em> contains all the non-technical documents that conspire to make the standards
+            project work: what the core values are, what the governance model is, how to produce documents,
+            etc.
+          </p>
+          <dfn>
+            <!-- <dt><a href="/meta/code-of-conduct/">Code of Conduct</a></dt> -->
+            <dt>Code of Conduct</dt>
+            <dd>
+              tk
+              <!-- The code of conduct that all community participants are held to. -->
+              <!-- https://github.com/ipfs/community/blob/master/code-of-conduct.md -->
+            </dd>
+            <!-- <dt><a href="/meta/principles/">Principles &amp; Values</a></dt> -->
+            <dt>Principles &amp; Values</dt>
+            <dd>
+              tk
+            </dd>
+            <!-- <dt><a href="/meta/governance/">Governance Model</a></dt> -->
+            <dt>Governance Model</dt>
+            <dd>
+              tk
+            </dd>
+            <dt><a href="/meta/spec-for-specs/">Spec for Specs</a></dt>
+            <dd>
+              Specifies the format and system used to create and maintain specifications for
+              the interplanetary stack.
+            </dd>
+            <!-- <dt><a href="/meta/license/">Document License</a></dt> -->
+            <dt>Document License</dt>
+            <dd>
+              tk
+              <!--
+                WHATWG:
+                Copyright © WHATWG (Apple, Google, Mozilla, Microsoft). This work is licensed under a Creative Commons Attribution 4.0 International License. To the extent portions of it are incorporated into source code, such portions in the source code are licensed under the BSD 3-Clause License instead.
+                W3C:
+                Copyright © 2022 W3C® (MIT, ERCIM, Keio, Beihang). W3C liability, trademark and permissive document license rules apply.
+               -->
+            </dd>
+          </dfn>
+        </section>
+      </div>
     </section>
-    <section>
-      <h2>Meta</h2>
-      <p>
-        <em>Meta</em> contains all the non-technical documents that conspire to make the standards
-        project work: what the core values are, what the governance model is, how to produce documents,
-        etc.
-      </p>
-      <dfn>
-        <!-- <dt><a href="/meta/code-of-conduct/">Code of Conduct</a></dt> -->
-        <dt>Code of Conduct</dt>
-        <dd>
-          tk
-          <!-- The code of conduct that all community participants are held to. -->
-          <!-- https://github.com/ipfs/community/blob/master/code-of-conduct.md -->
-        </dd>
-        <!-- <dt><a href="/meta/principles/">Principles &amp; Values</a></dt> -->
-        <dt>Principles &amp; Values</dt>
-        <dd>
-          tk
-        </dd>
-        <!-- <dt><a href="/meta/governance/">Governance Model</a></dt> -->
-        <dt>Governance Model</dt>
-        <dd>
-          tk
-        </dd>
-        <dt><a href="/meta/spec-for-specs/">Spec for Specs</a></dt>
-        <dd>
-          Specifies the format and system used to create and maintain specifications for
-          the interplanetary stack.
-        </dd>
-        <!-- <dt><a href="/meta/license/">Document License</a></dt> -->
-        <dt>Document License</dt>
-        <dd>
-          tk
-          <!--
-            WHATWG:
-            Copyright © WHATWG (Apple, Google, Mozilla, Microsoft). This work is licensed under a Creative Commons Attribution 4.0 International License. To the extent portions of it are incorporated into source code, such portions in the source code are licensed under the BSD 3-Clause License instead.
-            W3C:
-            Copyright © 2022 W3C® (MIT, ERCIM, Keio, Beihang). W3C liability, trademark and permissive document license rules apply.
-           -->
-        </dd>
-      </dfn>
-    </section>
-    <footer>
+  </main>
+  <footer>
+    <div>
       <p>
         <a href="https://ipfs.tech/"><img src="/ipfs.svg" width="20" height="20" alt="IPFS logo"> IPFS</a>
         •
@@ -109,7 +130,7 @@
         •
         <a href="https://multiformats.io/"><img src="/multiformats.svg" width="20" height="20" alt="Multiformats logo"> Multiformats</a>
       </p>
-    </footer>
-  </main>
+      </div>
+  </footer>
 </body>
 </html>
