@@ -6,10 +6,8 @@ body {
   max-width: var(--max-readable-width);
   margin: 0 auto;
   padding: 0 0 0 0;
-  font-size: 1.25rem;
   line-height: 1.5;
   font-family: var(--body-family);
-  font-weight: 300;
 }
 
 #ipseity-back-to-root {
@@ -20,8 +18,12 @@ body {
   font-size: 0.9rem;
 }
 #ipseity-back-to-root a {
-  color: #fff;
+  color: var(--ipfs-off-white);
   text-decoration: none;
+  transition: color 0.2s;
+}
+#ipseity-back-to-root a:hover {
+  color: var(--ipfs-yellow);
 }
 
 header {
@@ -29,16 +31,19 @@ header {
   background-repeat: no-repeat;
   background-size: 100px;
   background-position-x: right;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  border-bottom: 0.25rem solid var(--ipfs-turquoise);
+  padding-bottom: 2rem;
 }
 header dt {
-  font-weight: 300;
+  font-weight: var(--weight-regular);
 }
 header dd img {
   opacity: 0.5;
   transition: opacity .5s;
   background: var(--contrast-bg);
   border-radius: 2px;
+  vertical-align: sub;
 }
 header dd img:hover {
   opacity: 1;
@@ -46,27 +51,37 @@ header dd img:hover {
 header dd a {
   text-decoration: none;
 }
+/* header::after {
+  width: 100%;
+  height: 5rem;
+  background: var(--ipfs-brand-gradient-back);
+  display: block;
+  content: " ";
+} */
+/* border-bottom: 0.25rem solid var(--ipfs-turquoise);
+padding-bottom: 1.25rem; */
 
 h1 {
   font-family: var(--heading-family);
   max-width: calc(100% - (100px + 1rem));
-  font-size: 3rem;
+  font-size: var(--size-h1);
+  font-weight: var(--weight-semi-bold);
   margin: 0.15rem 0 0 0;
 }
-h2 {
-  font-size: 1.4rem;
-}
-h3 {
-  font-size: 1.2rem;
-}
+h2 { font-size: var(--size-h2); }
+h3 { font-size: var(--size-h3); }
+h4 { font-size: var(--size-h4); }
+h5 { font-size: var(--size-h5); }
+h6 { font-size: var(--size-p); }
 h2, h3, h4, h5, h6 {
-  margin-top: 3rem;
+  margin: 3rem 0 0 0;
+  font-weight: var(--weight-semi-bold);
 }
 .header-wrapper + section > .header-wrapper > :is(h3, h4, h5, h6) {
   margin-top: 1rem;
 }
 p#last-modified {
-  color: var(--link-colour);
+  color: var(--ipfs-ash-grey);
   margin-top: -1rem;
   font-size: 1.6rem;
 }

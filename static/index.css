@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   font-family: var(--body-family);
   font-weight: 300;
@@ -97,6 +97,11 @@ main > section section {
   background: var(--stark-bg);
   color: var(--stark-fg);
   padding: 0 1rem;
+}
+h3 {
+  font-size: var(--size-h3);
+  font-weight: var(--weight-semi-bold);
+  margin-bottom: 1rem;
 }
 
 a {

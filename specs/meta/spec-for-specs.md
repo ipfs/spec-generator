@@ -79,6 +79,9 @@ Sections in a :ref[spec] are nested by using various heading depths. Note that n
 enforced automatically. If for instance you have an `h5` following an `h2`, it will be promoted to an
 `h3` (recursively if it had nested `h6`s of its own).
 
+All of the content between the `h1` spec title and the first subheading of the document is considered
+to be the abstract for the document and will be incorporated into the header material.
+
 Sections automatically get an identifier based on their heading. This is convenient, but it can cause
 broken links when the section heading changes. If you wish to specify your own ID for a section you can
 do so by appending `{#your-id}` to the heading, like so:

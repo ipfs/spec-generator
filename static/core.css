@@ -150,6 +150,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   --ipfs-bright: #06f391;
 
   --ipfs-brand-gradient: linear-gradient(to top right, var(--ipfs-navy), #43979b);
+  --ipfs-brand-gradient-back: linear-gradient(to bottom left, var(--ipfs-navy), #43979b);
   --ipfs-gradient-0-background-image: linear-gradient(to top, #041727 0%,#043b55 100%);
 
   --ipfs-text: #0b2c41;
@@ -184,7 +185,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   --warning-colour: var(--ipfs-yellow);
   --example-colour: var(--ipfs-ash-grey);
   --note-colour: var(--secondary-highlight);
-  --standard-gradient: linear-gradient(to right, var(--highlight-colour), var(--secondary-highlight));
+  --standard-gradient: linear-gradient(to right, var(--ipfs-navy), var(--highlight-colour));
   --contrast-bg: transparent;
 }
 
