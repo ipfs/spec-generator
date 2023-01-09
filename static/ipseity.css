@@ -173,25 +173,24 @@ code, kbd, samp, pre[class*="language-"] > code {
 
 div.issue, div.warning, div.note, div.example {
   border-left: 0.4rem solid;
-  padding-left: 0.6rem;
+  padding: 0.2rem 0.6rem;
   position: relative;
+  background: var(--stark-bg);
+  color: var(--stark-fg);
 }
 div.issue { border-color: var(--issue-colour); }
 div.warning { border-color: var(--warning-colour); }
 div.note { border-color: var(--note-colour); }
 div.example { border-color: var(--example-colour); }
-div.issue::before, div.warning::before, div.note::before, div.example::before {
+div.issue::before, div.warning::before, div.note::before {
   display: block;
   position: absolute;
   left: -2rem;
-  font-size: 0.8rem;
-  writing-mode: sideways-lr;
-  white-space: nowrap;
 }
-div.issue::before { content: "issue 🚧"; }
-div.warning::before { content: "warning ⚠️"; }
-div.note::before { content: "note 📔"; }
-div.example::before { content: "eg. 🐈"; }
+div.issue::before { content: "🚧"; }
+div.warning::before { content: "⚠️"; }
+div.note::before { content: "📔"; }
+/* div.example::before { content: "eg. 🐈"; } */
 
 .bibliography dt {
   font-weight: bold;
@@ -226,9 +225,12 @@ div.example::before { content: "eg. 🐈"; }
 
 @media only screen and (max-width: 816px) {
   body {
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-right: 1rem;
     font-size: 1rem;
+  }
+  #ipseity-back-to-root {
+    margin: 0 -1rem 2rem -1rem;
   }
   header {
     background-size: 50px;
@@ -239,6 +241,17 @@ div.example::before { content: "eg. 🐈"; }
   p#last-modified {
     margin-top: -0.8rem;
     font-size: 1.2rem;
+  }
+  section > .self-link {
+    top: -1rem;
+    right: 0;
+  }
+  div.issue, div.warning, div.note, div.example {
+    margin-top: 2rem;
+  }
+  div.issue::before, div.warning::before, div.note::before {
+    left: unset;
+    top: -0.1rem;
   }
 }
 
