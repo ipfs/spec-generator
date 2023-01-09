@@ -51,15 +51,6 @@ header dd img:hover {
 header dd a {
   text-decoration: none;
 }
-/* header::after {
-  width: 100%;
-  height: 5rem;
-  background: var(--ipfs-brand-gradient-back);
-  display: block;
-  content: " ";
-} */
-/* border-bottom: 0.25rem solid var(--ipfs-turquoise);
-padding-bottom: 1.25rem; */
 
 h1 {
   font-family: var(--heading-family);
@@ -76,9 +67,6 @@ h6 { font-size: var(--size-p); }
 h2, h3, h4, h5, h6 {
   margin: 3rem 0 0 0;
   font-weight: var(--weight-semi-bold);
-}
-.header-wrapper + section > .header-wrapper > :is(h3, h4, h5, h6) {
-  margin-top: 1rem;
 }
 p#last-modified {
   color: var(--ipfs-ash-grey);
@@ -142,33 +130,29 @@ body:not(.toc-inline) :not(li) > .toc {
   margin-left: 4rem;
 }
 
-:is(h2, h3, h4, h5, h6):not(#toc > h2) {
-  position: relative;
-  left: -.5em;
-}
 .header-wrapper {
   display: flex;
   align-items: baseline;
 }
-:is(h2, h3, h4, h5, h6) + a.self-link {
-  color: inherit;
-  order: -1;
+.header-wrapper + section > .header-wrapper > :is(h3, h4, h5, h6) {
+  margin-top: 1rem;
+}
+section {
   position: relative;
-  left: -1.1em;
-  font-size: 1rem;
-  opacity: .5;
-  transition: opacity .5s;
 }
-:is(h2, h3, h4, h5, h6) + a.self-link:hover {
-  opacity: 1;
-}
-:is(h2, h3) + a.self-link {
-  top: -.2em;
-}
-:is(h2, h3, h4, h5, h6) + a.self-link::before {
-  content: "§";
+section > .self-link {
+  position: absolute;
+  top: 0;
+  right: -1rem;
   text-decoration: none;
-  color: var(--secondary-highlight);
+  transition: color 0.2s;
+}
+.self-link::after {
+  content: "#";
+  color: var(--ipfs-ash-grey);
+}
+.self-link:hover::after {
+  color: var(--ipfs-yellow);
 }
 
 dfn {
@@ -183,7 +167,8 @@ pre[class*="language-"] > code {
   border-left-width: 0.4rem;
 }
 code, kbd, samp, pre[class*="language-"] > code {
-  font-size: 0.9rem;
+  font-family: var(--ipfs-monospace);
+  font-size: var(--size-mono);
 }
 
 div.issue, div.warning, div.note, div.example {
