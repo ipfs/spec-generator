@@ -70,6 +70,9 @@ h2, h3, h4, h5, h6 {
   margin: 3rem 0 0 0;
   font-weight: var(--weight-semi-bold);
 }
+:is(h2, h3, h4, h5, h6) bdi.secno {
+  color: var(--ipfs-ash-grey);
+}
 p#last-modified {
   color: var(--ipfs-ash-grey);
   margin-top: 0rem;

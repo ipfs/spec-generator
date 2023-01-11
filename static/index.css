@@ -106,18 +106,22 @@ h3 {
 
 a {
   color: var(--highlight-colour);
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--ipfs-yellow);
 }
 dt {
   font-style: normal;
   font-weight: bold;
 }
 dt a {
-  text-decoration: none;
+  text-decoration-color: var(--ipfs-stone-grey);
   display: block;
 }
 dd {
   font-style: normal;
-  margin-left: 0;
+  margin-left: 1rem;
   margin-bottom: .6rem;
 }
 

@@ -1,14 +1,14 @@
 ---
 editors:
-    - name: Robin Berjon
-      email: robin@berjon.com
-      url: https://berjon.com/
-      github: darobin
-      twitter: robinberjon
-      mastodon: "@robin@mastodon.social"
-      affiliation:
-          name: Protocol Labs
-          url: https://protocol.ai/
+  - name: Robin Berjon
+    email: robin@berjon.com
+    url: https://berjon.com/
+    github: darobin
+    twitter: robinberjon
+    mastodon: "@robin@mastodon.social"
+    affiliation:
+        name: Protocol Labs
+        url: https://protocol.ai/
 xref:
   - dom
   - test-methodology
