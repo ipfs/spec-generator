@@ -204,6 +204,33 @@ div.note::before { content: "📔"; }
   font-weight: bold;
 }
 
+table.ipseity-data-table {
+  background: var(--stark-bg);
+  color: var(--stark-fg);
+  border-collapse: collapse;
+}
+.ipseity-data-table th {
+  position: sticky;
+  top: 0;
+  background: var(--stark-fg);
+  color: var(--stark-bg);
+  cursor: pointer;
+}
+.ipseity-data-table tbody tr:nth-child(even) {
+  background: var(--bg);
+}
+.ipseity-data-table :is(th, td) {
+  padding-left: 0.2rem;
+  text-align: left;
+  vertical-align: top;
+}
+.ipseity-data-table :is(th, td):first-of-type {
+  padding-left: 0.4rem;
+}
+.ipseity-data-table :is(th, td):last-of-type {
+  padding-right: 0.4rem;
+}
+
 #ipseity-reports {
   position: fixed;
   top: 1rem;
