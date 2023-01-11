@@ -1,0 +1,9 @@
+{
+  "title": "Multiformats Registry",
+  "authors": [
+    "Robin Berjon"
+  ],
+  "date": "2023-01-11",
+  "shortName": "multiformats-registry",
+  "href": "https://specs.ipfs.tech/multiformats/multiformats-registry/"
+}

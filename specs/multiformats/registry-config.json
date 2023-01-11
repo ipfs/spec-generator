@@ -1,0 +1,19 @@
+{
+  "columns": [
+    "name",
+    "tag",
+    "code",
+    "status",
+    "description"
+  ],
+  "labels": {
+    "name": "Name",
+    "tag": "Tag",
+    "code": "Code",
+    "status": "Status",
+    "description": "Description"
+  },
+  "sorts": {
+    "code": "int"
+  }
+}
