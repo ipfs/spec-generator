@@ -37,6 +37,7 @@ header {
 }
 header dt {
   font-weight: var(--weight-regular);
+  text-decoration: underline;
 }
 header dd img {
   opacity: 0.5;
@@ -57,6 +58,7 @@ h1 {
   max-width: calc(100% - (100px + 1rem));
   font-size: var(--size-h1);
   font-weight: var(--weight-semi-bold);
+  line-height: 1;
   margin: 0.15rem 0 0 0;
 }
 h2 { font-size: var(--size-h2); }
@@ -70,7 +72,7 @@ h2, h3, h4, h5, h6 {
 }
 p#last-modified {
   color: var(--ipfs-ash-grey);
-  margin-top: -1rem;
+  margin-top: 0rem;
   font-size: 1.6rem;
 }
 
@@ -102,6 +104,9 @@ em.rfc2119 {
 .toc > li {
   margin: 1.5rem 0;
   font-weight: bold;
+}
+.toc.no-depth > li {
+  margin: 1rem 0;
 }
 .toc > li li {
   margin: 0.3rem 0;
