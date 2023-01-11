@@ -8,12 +8,13 @@ Array.from(document.querySelectorAll('table.ipseity-data-table'))
 ;
 
 function makeTableSorter (table, th, idx) {
+  let sortDirection = 1;
   // parseInt() without radix is on purpose, we get 0x prefixes
   const sortFunctionsByType = {
-    string: (a, b) => (a || '').localeCompare(b),
+    string: (a, b) => sortDirection * (a || '').localeCompare(b),
     int: (a, b) => {
-      if (parseInt(a) < parseInt(b)) return -1;
-      if (parseInt(a) > parseInt(b)) return 1;
+      if (parseInt(a) < parseInt(b)) return sortDirection * -1;
+      if (parseInt(a) > parseInt(b)) return sortDirection * 1;
       return 0;
     },
   };
@@ -28,5 +29,7 @@ function makeTableSorter (table, th, idx) {
       })
     ;
     tbody.replaceChildren(...rows);
+    sortDirection *= -1;
+    console.warn(sortDirection);
   };
 }
