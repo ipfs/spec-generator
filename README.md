@@ -2,7 +2,7 @@
 # InterPlanetary Standards Edited and Integrated to Travel Yonder (IPSEITY)
 
 This is an experiement in improving our standards infrastructure. It publishes to
-[a Fleek site](https://silent-breeze-5712.on.fleek.co/).
+Fleek and you can enjoy it online at [https://specs.ipfs.tech/](https://specs.ipfs.tech/).
 
 I make no claim that this is perfect or the right way to do this. It can be used
 as a foundation, but it can also be taken in another direction.
