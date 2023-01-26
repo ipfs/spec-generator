@@ -9,7 +9,7 @@ as a foundation, but it can also be taken in another direction.
 
 ## Usage
 
-If you want to make a spec, clone this, read the [spec for specs](https://silent-breeze-5712.on.fleek.co/meta/spec-for-specs/)
+If you want to make a spec, clone this, read the [spec for specs](https://specs.ipfs.tech/meta/spec-for-specs/)
 (or just copy `specs/meta/spec-for-specs.md`, it's just enriched MD), and make a new
 spec in the right directory under `specs`.
 

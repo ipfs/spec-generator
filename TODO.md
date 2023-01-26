@@ -1,17 +1,6 @@
 
 # TODO
 
-- [x] Spec for Specs needs to be written
-- [ ] look at Fleek hosting (test run myself before doing the real thing)
-- [x] Mobile
-- [x] Print
-- [x] dark mode
-- [x] nav to root
-- [x] refactor
-
-- [ ] Start setting up the structure of the spec space
-    - [x] We need a `meta` section, with specs-for-specs notably
-    - [ ] Test protocol spec: the way in which the test runners are expected to run in all implemetations
 
 ## Next
 - [ ] integrate IPIP
@@ -19,16 +8,6 @@
 - [ ] Multiformat metadata (some hover thing that shows detail for embedded MFs)
 - [ ] lint mode (reporting errors out rather than to the spec)
 - [ ] a lot more tests
-
-## Test Suite Todo
-- [x] create dir
-- [ ] port over a small number of the relevant gateway tests (block & car)
-- [ ] include a command to launch the daemon
-- [x] basic runner that can run those tests and hit the daemon right
-- [x] report to MD / JSON / HTML
-
-Run:
-ipfs daemon --writeable
 
 ## For The Specs
 
