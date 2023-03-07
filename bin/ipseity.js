@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { argv, cwd } from "node:process";
-import { isAbsolute, join } from "node:path";
+import { isAbsolute, join, dirname } from "node:path";
 import { program } from 'commander';
 import IpseityRunner from "../lib/runner.js";
 import makeRel from '../lib/rel.js';
@@ -23,9 +23,10 @@ program.parse(argv);
 let { config, watch } = program.opts();
 config = resolve(cwd(), config);
 const options = await loadJSON(config);
+const configDir = dirname(config);
 ['input', 'output', 'template'].forEach(k => {
   if (!options[k]) die(`Missing "${k}" field in configuration.`);
-  options[k] = resolve(config, options[k]);
+  options[k] = resolve(configDir, options[k]);
 });
 options.runMode = watch ? 'build' : 'serve';
 

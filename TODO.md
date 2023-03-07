@@ -9,7 +9,7 @@ This is for the reboot that focuses on having each spec world have its own repo 
   - [x] 11ty
   - [x] commander
   - [x] jsdom
-- [ ] Configuration that drives building things
+- [x] Configuration that drives building things
 - [ ] Generate index.html
 - [ ] Generate CSS, particularly the specs CSS, using the right dependencies
 - [ ] Template to wrap specs in
