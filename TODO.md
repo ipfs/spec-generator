@@ -1,6 +1,37 @@
 
 # TODO
 
+This is for the reboot that focuses on having each spec world have its own repo and site.
+
+- [ ] Scratch source to IPFS to have something to play with
+- [x] Update
+  - [x] cssn
+  - [x] 11ty
+  - [x] commander
+  - [x] jsdom
+- [ ] Configuration that drives building things
+- [ ] Generate index.html
+- [ ] Generate CSS, particularly the specs CSS
+- [ ] Template to wrap specs in
+- [ ] Copy images over
+- [ ] Generate the MD output
+- [ ] Generate the JSON output for xref, and use that as sources too
+
+## Deploy Phase
+
+- [ ] Have the basics of IPFS specs done
+  - [ ] Remove MF governance from the lot
+  - [ ] CoC & SfS are in
+  - [ ] What Defines IPFS
+  - [ ] Addressing doc
+  - [ ] gateway specs
+  - [ ] CID spec
+- [ ] Set things up for libp2p, they were interested
+- [ ] Use this to fix multiformats.io and clean up the specs there
+- [ ] IPNI has specs, ask them
+- [ ] IPLD?
+
+---
 
 ## Next
 - [ ] integrate IPIP

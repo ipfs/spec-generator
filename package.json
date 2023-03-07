@@ -6,22 +6,12 @@
   "author": "Robin Berjon <robin@berjon.com>",
   "license": "MIT",
   "scripts": {
-    "watch": "concurrently --handle-input npm:watch-md npm:watch-css",
-    "watch-md": "nodemon ./node_modules/.bin/eleventy -- --serve --port=8023 --config=.eleventy.cjs",
-    "watch-css": "concurrently --handle-input npm:watch-css-ips npm:watch-css-idx",
-    "watch-css-ips": "NODE_ENV=production npx cssn -w static/ipseity.css static/ipseity.min.css",
-    "watch-css-idx": "NODE_ENV=production npx cssn -w static/index.css static/index.min.css",
-    "build": "npm run build-css && npm run build-md",
-    "build-md": "npx @11ty/eleventy --config=.eleventy.cjs",
-    "build-css": "npm run build-css-ips && npm run build-css-idx",
-    "build-css-ips": "NODE_ENV=production npx cssn static/ipseity.css static/ipseity.min.css",
-    "build-css-idx": "NODE_ENV=production npx cssn static/index.css static/index.min.css",
     "postinstall": "npm run get-webref",
     "get-webref": "./prepare.sh",
     "test": "mocha"
   },
   "bin": {
-    "bastest": "./bin/bastest.js"
+    "ipseity": "./bin/ipseity.js"
   },
   "mocha": {
     "reporter": "spec",
@@ -52,30 +42,30 @@
     "rules": {}
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "axios": "^1.1.3",
-    "commander": "^9.4.1",
-    "concurrently": "^7.5.0",
-    "cssn": "^3.3.1",
-    "eslint": "^8.27.0",
-    "hast-util-sanitize": "^4.0.0",
-    "jsdom": "^20.0.2",
-    "mdast-util-find-and-replace": "^2.2.1",
-    "mdast-util-to-string": "^3.1.0",
-    "mocha": "^10.1.0",
-    "nodemon": "^2.0.20",
+    "@11ty/eleventy": "^2.0.0",
+    "axios": "^1.3.4",
+    "commander": "^10.0.0",
+    "concurrently": "^7.6.0",
+    "cssn": "^4.0.0",
+    "eslint": "^8.35.0",
+    "hast-util-sanitize": "^4.1.0",
+    "jsdom": "^21.1.0",
+    "mdast-util-find-and-replace": "^2.2.2",
+    "mdast-util-to-string": "^3.1.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.21",
     "normalize.css": "^8.0.1",
     "pluralize": "^8.0.0",
     "prismjs": "^1.29.0",
     "remark": "^14.0.2",
     "remark-directive": "^2.0.1",
     "remark-heading-id": "^1.0.0",
-    "remark-html": "^15.0.1",
+    "remark-html": "^15.0.2",
     "remark-prism": "^1.3.6",
     "remark-squeeze-paragraphs": "^5.0.1",
-    "respec": "^32.3.0",
+    "respec": "^32.7.1",
     "selectron-test": "^2.0.0",
     "specref": "github:tobie/specref",
-    "unist-util-visit": "^4.1.1"
+    "unist-util-visit": "^4.1.2"
   }
 }

@@ -1,5 +1,4 @@
 
-// import { equal } from 'node:assert';
 import { JSDOM } from 'jsdom';
 import makeSelectron from 'selectron-test';
 import { processMD } from '../lib/process.js';
