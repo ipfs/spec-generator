@@ -18,7 +18,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 100;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-Thin.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-Thin.ttf') format('opentype');
 }
 @font-face {
   font-family: 'Plex';
@@ -26,7 +26,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 100;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-ThinItalic.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-ThinItalic.ttf') format('opentype');
 }
 
 @font-face {
@@ -35,7 +35,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 200;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-ExtraLight.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-ExtraLight.ttf') format('opentype');
 }
 @font-face {
   font-family: 'Plex';
@@ -43,7 +43,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 200;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-ExtraLightItalic.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-ExtraLightItalic.ttf') format('opentype');
 }
 
 @font-face {
@@ -52,7 +52,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 300;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-Light.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-Light.ttf') format('opentype');
 }
 @font-face {
   font-family: 'Plex';
@@ -60,7 +60,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 300;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-LightItalic.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-LightItalic.ttf') format('opentype');
 }
 
 @font-face {
@@ -69,7 +69,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 400;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-Regular.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-Regular.ttf') format('opentype');
 }
 @font-face {
   font-family: 'Plex';
@@ -77,7 +77,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 400;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-Italic.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-Italic.ttf') format('opentype');
 }
 
 @font-face {
@@ -86,7 +86,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 500;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-Medium.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-Medium.ttf') format('opentype');
 }
 @font-face {
   font-family: 'Plex';
@@ -94,7 +94,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 500;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-MediumItalic.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-MediumItalic.ttf') format('opentype');
 }
 
 @font-face {
@@ -103,7 +103,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 600;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-SemiBold.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-SemiBold.ttf') format('opentype');
 }
 @font-face {
   font-family: 'Plex';
@@ -111,7 +111,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 600;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-SemiBoldItalic.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-SemiBoldItalic.ttf') format('opentype');
 }
 
 @font-face {
@@ -120,7 +120,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 700;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-Bold.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-Bold.ttf') format('opentype');
 }
 @font-face {
   font-family: 'Plex';
@@ -128,7 +128,7 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   font-weight: 700;
   src: local('IBM Plex Sans'),
     local('IBM-Plex-Sans'),
-    url('fonts/IBMPlexSans-BoldItalic.ttf') format('opentype');
+    url('/fonts/IBMPlexSans-BoldItalic.ttf') format('opentype');
 }
 
 :root {
