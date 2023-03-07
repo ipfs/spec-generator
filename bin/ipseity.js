@@ -16,7 +16,7 @@ program
   .description('Spec generator for the Interplanetary Stack')
   .version(version)
   .requiredOption('-c, --config <path>', 'path to the configuration file')
-  .option('--watch', 'watches the input directory and re-runs with every change', false)
+  .option('-w, --watch', 'watches the input directory and re-runs with every change', false)
 ;
 program.parse(argv);
 
@@ -28,10 +28,11 @@ const configDir = dirname(config);
   if (!options[k]) die(`Missing "${k}" field in configuration.`);
   options[k] = resolve(configDir, options[k]);
 });
-options.runMode = watch ? 'build' : 'serve';
+options.runMode = watch ? 'serve' : 'build';
 
 const ir = new IpseityRunner(options);
-await ir.run();
+if (watch) await ir.serve();
+else await ir.run();
 
 function resolve (cur, pth) {
   return isAbsolute(pth) ? pth : join(cur, pth)

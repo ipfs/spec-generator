@@ -10,13 +10,19 @@ This is for the reboot that focuses on having each spec world have its own repo 
   - [x] commander
   - [x] jsdom
 - [x] Configuration that drives building things
-- [ ] Generate index.html
-- [ ] Generate CSS, particularly the specs CSS, using the right dependencies
-- [ ] Template to wrap specs in
-- [ ] Copy images over
-- [ ] Generate the MD output
+- [x] Generate index.html
+- [x] Generate CSS, particularly the specs CSS, using the right dependencies
+- [x] Template to wrap specs in
+- [x] Copy images over
+- [x] Generate the MD output
+- [x] Make serve/watch work
 - [ ] Generate the JSON output for xref, and use that as sources too
 - [ ] fix tests
+- [ ] docs
+  - [ ] how to set things up
+  - [ ] configuration format
+  - [ ] template (including magic options)
+  - [ ] how to import the CSS and add your own
 
 ## Deploy Phase
 
