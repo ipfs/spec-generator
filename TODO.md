@@ -3,7 +3,7 @@
 
 This is for the reboot that focuses on having each spec world have its own repo and site.
 
-- [ ] Scratch source to IPFS to have something to play with
+- [x] Scratch source to IPFS to have something to play with
 - [x] Update
   - [x] cssn
   - [x] 11ty
@@ -11,11 +11,12 @@ This is for the reboot that focuses on having each spec world have its own repo 
   - [x] jsdom
 - [ ] Configuration that drives building things
 - [ ] Generate index.html
-- [ ] Generate CSS, particularly the specs CSS
+- [ ] Generate CSS, particularly the specs CSS, using the right dependencies
 - [ ] Template to wrap specs in
 - [ ] Copy images over
 - [ ] Generate the MD output
 - [ ] Generate the JSON output for xref, and use that as sources too
+- [ ] fix tests
 
 ## Deploy Phase
 

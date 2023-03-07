@@ -6,6 +6,7 @@ import { program } from 'commander';
 import IpseityRunner from "../lib/runner.js";
 import makeRel from '../lib/rel.js';
 import loadJSON from '../lib/load-json.js';
+import die from "../lib/die.js";
 
 const rel = makeRel(import.meta.url);
 const { version } = await loadJSON(rel('../package.json'));
@@ -21,12 +22,14 @@ program.parse(argv);
 
 let { config, watch } = program.opts();
 config = resolve(cwd(), config);
-let { input, output, ...options } = await loadJSON(config);
-input = resolve(config, input);
-output = resolve(config, output);
+const options = await loadJSON(config);
+['input', 'output', 'template'].forEach(k => {
+  if (!options[k]) die(`Missing "${k}" field in configuration.`);
+  options[k] = resolve(config, options[k]);
+});
 options.runMode = watch ? 'build' : 'serve';
 
-const ir = new IpseityRunner(input, output, options);
+const ir = new IpseityRunner(options);
 await ir.run();
 
 function resolve (cur, pth) {
