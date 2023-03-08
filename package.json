@@ -6,8 +6,6 @@
   "author": "Robin Berjon <robin@berjon.com>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npm run get-webref",
-    "get-webref": "./prepare.sh",
     "test": "mocha"
   },
   "bin": {
