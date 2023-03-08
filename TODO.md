@@ -16,7 +16,9 @@ This is for the reboot that focuses on having each spec world have its own repo 
 - [x] Copy images over
 - [x] Generate the MD output
 - [x] Make serve/watch work
-- [ ] Generate the JSON output for xref, and use that as sources too
+- [ ] Generate the JSON output for xref & cites
+- [ ] Use remote sources for xref & cites
+- [ ] Fix the webref submodule dependency and make that work after toolification
 - [ ] fix tests
 - [ ] docs
   - [ ] how to set things up

@@ -29,6 +29,13 @@ const configDir = dirname(config);
   options[k] = resolve(configDir, options[k]);
 });
 options.runMode = watch ? 'serve' : 'build';
+if (!options.baseURL) {
+  console.warn(`Defaulting baseURL configuration to "", this is probably not what you want.`);
+  options.baseURL = '';
+}
+else {
+  options.baseURL = options.baseURL.replace(/\/+$/, '');
+}
 
 const ir = new IpseityRunner(options);
 if (watch) await ir.serve();
