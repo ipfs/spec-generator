@@ -29,7 +29,7 @@ This is for the reboot that focuses on having each spec world have its own repo 
 ## XREF
 
 - [x] Eliminate local submodule entirely
-- [ ] Output xrefs from generated file to a .well-known directory, not one big dir, following the webref format
+- [x] Output xrefs from generated file to a .well-known directory, not one big dir, following the webref format
 - [ ] When xrefs are required, just load them from a list of URLs that includes https://w3c.github.io/webref/ed/dfns/ and other spec sites
 - [ ] That's what gets resolved
 - [ ] And same for cites, though we don't hit the same sources
