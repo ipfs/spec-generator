@@ -1,5 +1,5 @@
 {
-  "name": "ipseity",
+  "name": "spec-generator",
   "type": "module",
   "version": "0.0.1",
   "description": "InterPlanetary Standards Edited and Integrated to Travel Yonder (IPSEITY)",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/darobin/ipseity.git"
+    "url": "https://github.com/darobin/spec-generator.git"
   },
   "eslintConfig": {
     "env": {
