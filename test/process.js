@@ -1,7 +1,13 @@
 
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { mkdtemp } from 'node:fs/promises';
 import { JSDOM } from 'jsdom';
 import makeSelectron from 'selectron-test';
-import { processMD } from '../lib/process.js';
+import IpseityProcessor from '../lib/process.js';
+import makeRel from '../lib/rel.js';
+
+const rel = makeRel(import.meta.url);
 
 const sectionDoc = `
 # One
@@ -40,7 +46,7 @@ describe('General MD/HTML Processing', function () {
     selectron(`body > header > p#last-modified > time[datetime="${bd}"]`);
   });
   it('drops empty grafs', async () => {
-    const doc = await md2doc('## No Empty Paragraphs\n\n\ngr1\n\n\n\ngr2\n\n\n  \n\n\ngr3\n\n\n\n\n ');
+    const doc = await md2doc('# Title\n\n## No Empty Paragraphs\n\n\ngr1\n\n\n\ngr2\n\n\n  \n\n\ngr3\n\n\n\n\n ');
     const selectron = makeSelectron(doc);
     selectron('section h2', /No Empty Paragraphs/);
     selectron('section > p', 3);
@@ -72,21 +78,26 @@ describe('General MD/HTML Processing', function () {
   it('adds sectionals', async () => {
     const doc = await md2doc(sectionDoc);
     const selectron = makeSelectron(doc);
-    selectron('body > section:nth-of-type(3) > section > div.header-wrapper > h3', /Renested/);
-    selectron('body > section:nth-of-type(3) > section > div.header-wrapper > a.self-link', '');
-    selectron('body > section:nth-of-type(3) > section > div.header-wrapper > a[href="#renested"]');
-    selectron('body > section:nth-of-type(3) > section > div.header-wrapper > a[aria-label="Section 3.1"]');
+    selectron('body > section:nth-of-type(3) > section > h3', /Renested/);
+    selectron('body > section:nth-of-type(3) > section > h3 + a.self-link', '');
+    selectron('body > section:nth-of-type(3) > section > a[href="#renested"]');
+    selectron('body > section:nth-of-type(3) > section > a[aria-label="Section 3.1"]');
   });
   it('accepts custom header IDs', async () => {
-    const doc = await md2doc('## Introduction {#intro}');
+    const doc = await md2doc('# Ook\n\n## Introduction {#intro}');
     const selectron = makeSelectron(doc);
     selectron('h2#intro', /Introduction/);
     selectron('h2#intro + a[href="#intro"]');
   });
 });
 
-async function md2doc (md, opt) {
-  const html = await processMD(md, opt);
+async function md2doc (md, opt = {}) {
+  const template = rel('fixtures/template.html');
+  const output = await mkdtemp(join(tmpdir(), 'ipseity-'));
+  opt.page = { inputPath: output };
+  opt.editors = [];
+  const ips = new IpseityProcessor({ template, output, baseURL: 'https://berjon.com/' });
+  const html = await ips.render(md, opt);
   const { window: { document }} = new JSDOM(html);
   return document;
 }

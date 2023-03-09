@@ -17,22 +17,14 @@ This is for the reboot that focuses on having each spec world have its own repo 
 - [x] Generate the MD output
 - [x] Make serve/watch work
 - [x] Generate the JSON output for xref & cites
-- [ ] Use remote sources for xref & cites
-- [ ] Fix the webref submodule dependency and make that work after toolification
-- [ ] fix tests
+- [x] Use remote sources for xref & cites
+- [x] Fix the webref submodule dependency and make that work after toolification
+- [x] fix tests
 - [ ] docs
   - [ ] how to set things up
   - [ ] configuration format
   - [ ] template (including magic options)
   - [ ] how to import the CSS and add your own
-
-## XREF
-
-- [x] Eliminate local submodule entirely
-- [x] Output xrefs from generated file to a .well-known directory, not one big dir, following the webref format
-- [ ] When xrefs are required, just load them from a list of URLs that includes https://w3c.github.io/webref/ed/dfns/ and other spec sites
-- [ ] That's what gets resolved
-- [ ] And same for cites, though we don't hit the same sources
 
 
 ## Deploy Phase
