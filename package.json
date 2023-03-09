@@ -9,7 +9,8 @@
     "test": "mocha"
   },
   "bin": {
-    "ipseity": "./bin/ipseity.js"
+    "ipseity": "./bin/ipseity.js",
+    "spec-generator": "./bin/ipseity.js"
   },
   "mocha": {
     "reporter": "spec",

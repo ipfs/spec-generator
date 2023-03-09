@@ -20,15 +20,15 @@ This is for the reboot that focuses on having each spec world have its own repo 
 - [x] Use remote sources for xref & cites
 - [x] Fix the webref submodule dependency and make that work after toolification
 - [x] fix tests
-- [ ] docs
-  - [ ] how to set things up
-  - [ ] configuration format
-  - [ ] template (including magic options)
-  - [ ] how to import the CSS and add your own
-
+- [x] docs
+  - [x] how to set things up
+  - [x] configuration format
+  - [x] template (including magic options)
+  - [x] how to import the CSS and add your own
 
 ## Deploy Phase
 
+- [ ] Move this repo to the ipfs org
 - [ ] Have the basics of IPFS specs done
   - [ ] Remove MF governance from the lot
   - [ ] CoC & SfS are in

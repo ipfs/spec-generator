@@ -1,18 +1,134 @@
 
-# InterPlanetary Standards Edited and Integrated to Travel Yonder (IPSEITY)
+# Spec Generator: InterPlanetary Standards Edited and Integrated to Travel Yonder (IPSEITY)
 
-This is an experiement in improving our standards infrastructure. It publishes to
-Fleek and you can enjoy it online at [https://specs.ipfs.tech/](https://specs.ipfs.tech/).
+This is the specification generator for IPFS and other friends in the Interplanetary stack.
+You can enjoy its output online at [https://specs.ipfs.tech/](https://specs.ipfs.tech/).
 
-I make no claim that this is perfect or the right way to do this. It can be used
-as a foundation, but it can also be taken in another direction.
+It is essentially a batteries-included, unobtrusive static site generator. What it will do
+is:
+
+- Convert any `unicorn.md` in the input tree to `/unicorn/index.html` in the output tree with:
+  - A table of contents.
+  - A bunch of features for standards metadata (editors, etc.).
+  - Definitions and definitions cross-references support, including to all of the broader
+    [web standards universe](https://github.com/w3c/webref/).
+  - Bibliographical references to other specs (from [SpecRef](https://www.specref.org/)),
+    including linking and bibliography management.
+  - Exported definitions plus biblio entry for the specs you write, so that others can load them.
+  - Odds and ends that are helpful in this kind of context, you can read more in the
+    [spec for specs](https://specs.ipfs.tech/meta/spec-for-specs/).
+- Copy over any static files, including HTML documents.
+- Process any CSS files to inject dependencies that are needed to render specs nicely.
+- Add a number of useful resources to your ouput: fonts, if needed some scripts, and common
+  logos used in spec headers and the such.
+
+In watch mode it will auto-update the spec in your browser as you edit it.
+
+## Installation
+
+The usual:
+
+```sh
+npm install -g spec-generator
+```
+
+This will make a `spec-generator` command available. (It is also available under the name
+`ipseity`.)
 
 ## Usage
 
-If you want to make a spec, clone this, read the [spec for specs](https://specs.ipfs.tech/meta/spec-for-specs/)
-(or just copy `specs/meta/spec-for-specs.md`, it's just enriched MD), and make a new
-spec in the right directory under `specs`.
+In order to set up a spec site, you need:
 
-To run the generator you need to have `npm install`ed things, and then you can run
-`npm watch`. It will give you the site on `http://localhost:8023` (port may differ
-if taken) and auto-refresh when you edit.
+- A `source` directory that will contain your MD spec source and whatever static files you
+  want to copy over.
+- An `output` directory where the generated output will go. These two directories can be
+  absolutely anywhere, they don't have to share a parent. However, **don't** use the same
+  input and output.
+- A `config` file, that is a simple piece of JSON.
+- A `template` file that is a basic piece of HTML.
+- You probably also want one a `CSS` file that you can use to import the spec styles and
+  override with your own.
+
+That's a fair bit of setup, but you only need to do it once for a whole spec *site*, which
+hopefully shouldn't be too often.
+
+### Configuration
+
+The `config` file have the following format:
+
+```json
+{
+  "input": "./src/",
+  "output": "./out/",
+  "template": "./template.html",
+  "baseURL": "https://specs.ipfs.tech"
+}
+```
+
+The fields are simple:
+
+- `input`: the source directory, relative to the config file.
+- `output`: the published directory, relative to the config file.
+- `template`: the template file, relative to the config file.
+- `baseURL`: the base URL at which the specs are published. This is used to generated the
+  bibliographic entries for the specs in this site.
+
+All fields are required except `baseURL`, and `baseURL` is highly recommended.
+
+### Template
+
+The Markdown spec just generate the body of the spec, but you need some HTML to wrap
+around it from which to specify some metadata, hook up some styles, etc.
+
+An example template file might look like this:
+
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <link rel="stylesheet" href="/css/specs.css">
+    <link rel="icon" href="/img/my-standards-logo.svg">
+  </head>
+  <body>
+    <nav id="ipseity-back-to-root">
+      <a href="/">Standards Home</a>
+    </nav>
+    <ipseity-header></ipseity-header>
+${body}
+  </body>
+</html>
+```
+
+The `${body}` gets replaced by the Markdown output. Optionally the `ipseity-header` element
+can be used to mark the injection point for the spec metadata if you don't intend it to be
+the first thing in the body.
+
+Apart from these conventions you can have whatever you want in there.
+
+### CSS
+
+Any CSS file in your source directory gets processed via [`cssn`](https://github.com/darobin/cssn/)
+and if you include `@import 'ipseity';` or `@import 'spec-generator';`, it will be replaced by
+styles that are useful for specs.
+
+### Command Line
+
+There are two ways of running the command. The first is in regular batch mode:
+
+```sh
+ipseity -c /path/to/config.json
+```
+
+The `-c` option is always required. This will run once, generate the specs, and exit.
+
+Or you can run in watch mode. This is most useful while you're editing a spec:
+
+```sh
+ipseity -c /path/to/config.json -w
+```
+
+This will start up a local server and watch your files in the `input` directory. It will hot
+reload specs you have open in a browser.
