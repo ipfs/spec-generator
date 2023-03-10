@@ -37,6 +37,15 @@ describe('Full Run', function () {
     selectron('#ref-URL', '[URL]');
     selectron('#ref-URL + dd > a[href="https://url.spec.whatwg.org/"] > cite', 'URL Standard');
   });
+  it('outputs references', async () => {
+    const refs = JSON.parse(await readFile(rel('fixtures/out/.well-known/ipseity/references.json')));
+    const sfs = refs['spec-for-specs'];
+    ok(sfs, 'has a spec-for-specs entry');
+    equal(sfs.title, 'Spec for Specs', 'title is correct');
+    equal(sfs.authors[0], 'Robin Berjon', 'authors is correct');
+    equal(sfs.shortName, 'spec-for-specs', 'shortName is correct');
+    equal(sfs.href, 'https://berjon.com/specs/spec-for-specs/', 'href is correct');
+  });
   it('has no errors', () => {
     const reports = doc.querySelector('#ipseity-reports');
     if (!reports) {
