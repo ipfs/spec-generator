@@ -6,6 +6,8 @@
   "author": "Robin Berjon <robin@berjon.com>",
   "license": "MIT",
   "scripts": {
+    "build-css": "NODE_ENV=production cssn ./static/css/ipseity.css ./static/css/ipseity.min.css",
+    "prepublishOnly": "npm run build-css",
     "test": "mocha"
   },
   "bin": {
@@ -46,7 +48,7 @@
     "axios": "^1.3.4",
     "commander": "^10.0.0",
     "concurrently": "^7.6.0",
-    "cssn": "^4.0.0",
+    "cssn": "^4.1.0",
     "eslint": "^8.35.0",
     "hast-util-sanitize": "^4.1.0",
     "jsdom": "^21.1.0",
