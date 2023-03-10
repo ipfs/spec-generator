@@ -105,3 +105,8 @@ dist
 scratch/
 .vscode/
 public/
+test/fixtures/out/.well-known/
+test/fixtures/out/fonts/
+test/fixtures/out/img/
+test/fixtures/out/js/
+test/fixtures/out/spec-for-specs/

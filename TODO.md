@@ -29,8 +29,10 @@ This is for the reboot that focuses on having each spec world have its own repo 
 ## Deploy Phase
 
 - [ ] Move this repo to the ipfs org
+- [ ] Move the Fleek config there and remove from own, have it run this correctly
+- [ ] Nuke own initial stuff
 - [ ] Have the basics of IPFS specs done
-  - [ ] Remove MF governance from the lot
+  - [ ] Remove MF governance from the lot, for now (or flag draft)
   - [ ] CoC & SfS are in
   - [ ] What Defines IPFS
   - [ ] Addressing doc
