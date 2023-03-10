@@ -66,6 +66,7 @@
     "respec": "^32.7.1",
     "selectron-test": "^2.0.0",
     "specref": "github:tobie/specref",
-    "unist-util-visit": "^4.1.2"
+    "unist-util-visit": "^4.1.2",
+    "webref": "github:w3c/webref"
   }
 }

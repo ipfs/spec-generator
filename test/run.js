@@ -26,17 +26,21 @@ describe('Full Run', function () {
     doc = document;
     selectron = makeSelectron(doc);
   });
-  it('uses the template', async () => {
+  it('uses the template', () => {
     selectron('head > link[rel="icon"][href="/img/ipfs-standards.svg');
   });
-  it('has no errors', async () => {
+  it('produces correct ref links', () => {
+    selectron('a.bibref[href="#ref-YAML"', 'YAML');
+    selectron('a.bibref[href="#ref-WEBUSB"', 'WICG-WEBUSB');
+  });
+  it('has no errors', () => {
     const reports = doc.querySelector('#ipseity-reports');
     if (!reports) {
       ok(true);
       return;
     }
     const errors = Array.from(doc.querySelectorAll('details.ipseity-errors > ol > li')).map(li => li.textContent).filter(err => !/spec-for-specs/.test(err));
-    if (errors) console.warn(errors.join('\n'));
+    if (errors.length) console.warn(errors.join('\n'));
     equal(errors.length, 0, 'No real errors');
   });
 });

@@ -36,6 +36,8 @@ which means that you can cite it using `:cite[spec-for-specs]` which comes out a
 :ref[specs], and ideally in the entirety of the relevant standards universe, though that can at times
 prove challenging.
 
+We reference :cite[url]. We reference :cite[WICG-WEBUSB].
+
 ### Frontmatter
 
 A :ref[spec] MUST being with :ref[frontmatter]. :dfn[Frontmatter] is a preamble to the document placed
