@@ -33,6 +33,10 @@ describe('Full Run', function () {
     selectron('a.bibref[href="#ref-YAML"', 'YAML');
     selectron('a.bibref[href="#ref-WEBUSB"', 'WICG-WEBUSB');
   });
+  it('builds a correct biblio', () => {
+    selectron('#ref-URL', '[URL]');
+    selectron('#ref-URL + dd > a[href="https://url.spec.whatwg.org/"] > cite', 'URL Standard');
+  });
   it('has no errors', () => {
     const reports = doc.querySelector('#ipseity-reports');
     if (!reports) {
