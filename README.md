@@ -18,7 +18,6 @@ is:
   - Odds and ends that are helpful in this kind of context, you can read more in the
     [spec for specs](https://specs.ipfs.tech/meta/spec-for-specs/).
 - Copy over any static files, including HTML documents.
-- Process any CSS files to inject dependencies that are needed to render specs nicely.
 - Add a number of useful resources to your ouput: fonts, if needed some scripts, and common
   logos used in spec headers and the such.
 
@@ -46,8 +45,6 @@ In order to set up a spec site, you need:
   input and output.
 - A `config` file, that is a simple piece of JSON.
 - A `template` file that is a basic piece of HTML.
-- You probably also want one a `CSS` file that you can use to import the spec styles and
-  override with your own.
 
 That's a fair bit of setup, but you only need to do it once for a whole spec *site*, which
 hopefully shouldn't be too often.
@@ -89,7 +86,8 @@ An example template file might look like this:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title></title>
-    <link rel="stylesheet" href="/css/specs.css">
+    <link rel="stylesheet" href="/css/ipseity.min.css">
+    <link rel="stylesheet" href="/css/your-spec-style.css">
     <link rel="icon" href="/img/my-standards-logo.svg">
   </head>
   <body>
@@ -110,9 +108,9 @@ Apart from these conventions you can have whatever you want in there.
 
 ### CSS
 
-Any CSS file in your source directory gets processed via [`cssn`](https://github.com/darobin/cssn/)
-and if you include `@import 'ipseity';` or `@import 'spec-generator';`, it will be replaced by
-styles that are useful for specs.
+If your template includes `/css/ipseity.min.css`, that will load styles for the spec body.
+You can roll your own, of course, but this will have you covered. This doesn't include styling
+the wrapper your way.
 
 ### Command Line
 
