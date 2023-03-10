@@ -1,5 +1,6 @@
 
 import { readFile } from 'node:fs/promises';
+import { ok, equal } from 'node:assert';
 import { JSDOM } from 'jsdom';
 import makeSelectron from 'selectron-test';
 import IpseityRunner from '../lib/runner.js';
@@ -27,5 +28,15 @@ describe('Full Run', function () {
   });
   it('uses the template', async () => {
     selectron('head > link[rel="icon"][href="/img/ipfs-standards.svg');
+  });
+  it('has no errors', async () => {
+    const reports = doc.querySelector('#ipseity-reports');
+    if (!reports) {
+      ok(true);
+      return;
+    }
+    const errors = Array.from(doc.querySelectorAll('details.ipseity-errors > ol > li')).map(li => li.textContent).filter(err => !/spec-for-specs/.test(err));
+    if (errors) console.warn(errors.join('\n'));
+    equal(errors.length, 0, 'No real errors');
   });
 });
