@@ -46,6 +46,17 @@ describe('Full Run', function () {
     equal(sfs.shortName, 'spec-for-specs', 'shortName is correct');
     equal(sfs.href, 'https://berjon.com/specs/spec-for-specs/', 'href is correct');
   });
+  it('outputs definitions', async () => {
+    const refs = JSON.parse(await readFile(rel('fixtures/out/.well-known/ipseity/definitions/spec-for-specs.json')));
+    equal(refs.spec.title, 'Spec for Specs', 'title is correct');
+    equal(refs.spec.url, 'https://berjon.com/specs/spec-for-specs/', 'url is correct');
+    const dfns = refs.dfns.filter(d => d.id === 'dfn-spec');
+    equal(dfns.length, 2, 'two dfns for spec');
+    equal(dfns[0].href, 'https://berjon.com/specs/spec-for-specs/#dfn-spec', 'link is correct');
+    const texts = new Set(dfns.map(d => d.linkingText[0]));
+    ok(texts.has('spec'), 'singular definition');
+    ok(texts.has('specs'), 'plural definition');
+  });
   it('has no errors', () => {
     const reports = doc.querySelector('#ipseity-reports');
     if (!reports) {
