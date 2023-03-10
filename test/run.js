@@ -1,5 +1,5 @@
 
-import { readFile } from 'node:fs/promises';
+import { readFile, access } from 'node:fs/promises';
 import { ok, equal } from 'node:assert';
 import { JSDOM } from 'jsdom';
 import makeSelectron from 'selectron-test';
@@ -56,6 +56,10 @@ describe('Full Run', function () {
     const texts = new Set(dfns.map(d => d.linkingText[0]));
     ok(texts.has('spec'), 'singular definition');
     ok(texts.has('specs'), 'plural definition');
+  });
+  it('passes images through', async () => {
+    await access(rel('fixtures/out/img/test.png'));
+    ok(true, 'the image is there');
   });
   it('has no errors', () => {
     const reports = doc.querySelector('#ipseity-reports');
