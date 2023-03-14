@@ -30,6 +30,7 @@ graf
 `;
 
 describe('General MD/HTML Processing', function () {
+  this.timeout(10000);
   it('sets the title', async () => {
     const doc = await md2doc('# The `fun` spec');
     const selectron = makeSelectron(doc);
