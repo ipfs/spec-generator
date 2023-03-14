@@ -1,7 +1,7 @@
 {
   "name": "spec-generator",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "InterPlanetary Standards Edited and Integrated to Travel Yonder (IPSEITY)",
   "author": "Robin Berjon <robin@berjon.com>",
   "license": "MIT",
