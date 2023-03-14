@@ -12,6 +12,7 @@ editors:
 xref:
   - dom
   - test-methodology
+  - html
 ---
 
 # Spec for Specs
@@ -36,7 +37,7 @@ which means that you can cite it using `:cite[spec-for-specs]` which comes out a
 :ref[specs], and ideally in the entirety of the relevant standards universe, though that can at times
 prove challenging.
 
-We reference :cite[url]. We reference :cite[WICG-WEBUSB].
+We reference :cite[url]. We reference :cite[WICG-WEBUSB]. We use definition :ref[registerProtocolHandler(scheme, url)].
 
 ### Frontmatter
 

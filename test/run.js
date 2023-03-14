@@ -37,6 +37,10 @@ describe('Full Run', function () {
     selectron('#ref-URL', '[URL]');
     selectron('#ref-URL + dd > a[href="https://url.spec.whatwg.org/"] > cite', 'URL Standard');
   });
+  it('produces correct dfn links', () => {
+    selectron('a[href="https://html.spec.whatwg.org/multipage/system-state.html#dom-navigator-registerprotocolhandler"][data-dfn-type="method"]', 'registerProtocolHandler(scheme, url)');
+    selectron('a[data-dfn-type="method"] > code', 'registerProtocolHandler(scheme, url)');
+  });
   it('outputs references', async () => {
     const refs = JSON.parse(await readFile(rel('fixtures/out/.well-known/ipseity/references.json')));
     const sfs = refs['spec-for-specs'];
