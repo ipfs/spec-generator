@@ -40,6 +40,7 @@ describe('Full Run', function () {
   it('produces correct dfn links', () => {
     selectron('a[href="https://html.spec.whatwg.org/multipage/system-state.html#dom-navigator-registerprotocolhandler"][data-dfn-type="method"]', 'registerProtocolHandler(scheme, url)');
     selectron('a[data-dfn-type="method"] > code', 'registerProtocolHandler(scheme, url)');
+    selectron('a[href="#dfn-Frontmatter"][data-dfn-type="dfn"]', 'frontmatter');
   });
   it('outputs references', async () => {
     const refs = JSON.parse(await readFile(rel('fixtures/out/.well-known/ipseity/references.json')));
