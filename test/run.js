@@ -29,6 +29,10 @@ describe('Full Run', function () {
   it('uses the template', () => {
     selectron('head > link[rel="icon"][href="/img/ipfs-standards.svg');
   });
+  it('sets the date from front matter', async () => {
+    selectron('body > header > p#last-modified > time', '15 March 1977');
+    selectron(`body > header > p#last-modified > time[datetime="1977-03-15T00:00:00.000Z"]`);
+  });
   it('produces correct ref links', () => {
     selectron('a.bibref[href="#ref-YAML"', 'YAML');
     selectron('a.bibref[href="#ref-WEBUSB"', 'WICG-WEBUSB');

@@ -1,4 +1,5 @@
 ---
+date: 1977-03-15
 editors:
   - name: Robin Berjon
     email: robin@berjon.com
