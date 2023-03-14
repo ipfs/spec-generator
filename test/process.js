@@ -46,6 +46,11 @@ describe('General MD/HTML Processing', function () {
     selectron('body > header > p#last-modified > time', '15 March 1977');
     selectron(`body > header > p#last-modified > time[datetime="${bd}"]`);
   });
+  it('sets maturity', async () => {
+    const doc = await md2doc('# A stable doc', { maturity: 'stable' });
+    const selectron = makeSelectron(doc);
+    selectron('body > header > div.ipseity-maturity > img[src="https://img.shields.io/badge/status-stable-brightgreen.svg?style=flat-square"][alt="status: stable"][height="20"]');
+  });
   it('drops empty grafs', async () => {
     const doc = await md2doc('# Title\n\n## No Empty Paragraphs\n\n\ngr1\n\n\n\ngr2\n\n\n  \n\n\ngr3\n\n\n\n\n ');
     const selectron = makeSelectron(doc);

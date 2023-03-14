@@ -9,6 +9,7 @@ editors:
     affiliation:
         name: Protocol Labs
         url: https://protocol.ai/
+stability: reliable
 xref:
   - dom
   - test-methodology
