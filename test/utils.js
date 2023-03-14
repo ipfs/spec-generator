@@ -1,5 +1,5 @@
 
-import { ok, equal } from 'node:assert';
+import { equal } from 'node:assert';
 import { addId } from '../lib/html/utils.js';
 
 describe('HTML Utils', function () {
