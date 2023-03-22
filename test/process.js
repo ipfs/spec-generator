@@ -6,6 +6,7 @@ import { JSDOM } from 'jsdom';
 import makeSelectron from 'selectron-test';
 import IpseityProcessor from '../lib/process.js';
 import makeRel from '../lib/rel.js';
+import assert from 'assert'
 
 const rel = makeRel(import.meta.url);
 
@@ -38,6 +39,11 @@ describe('General MD/HTML Processing', function () {
     selectron('h1', 'The fun spec');
     selectron('h1 > code', 'fun');
     selectron('title', 'The fun spec');
+  });
+  it('sets canonical link', async() => {
+    const doc = await md2doc('# The `fun` spec');
+    const link = doc.querySelector('link[rel=canonical]');
+    assert.equal(link.href, 'https://berjon.com/permalink');
   });
   it('sets the date', async () => {
     const bd = '1977-03-15T08:42:00.000Z';
@@ -100,7 +106,7 @@ describe('General MD/HTML Processing', function () {
 async function md2doc (md, opt = {}) {
   const template = rel('fixtures/template.html');
   const output = await mkdtemp(join(tmpdir(), 'ipseity-'));
-  opt.page = { inputPath: output };
+  opt.page = { inputPath: output, url: 'permalink' };
   opt.editors = [];
   const ips = new IpseityProcessor({ template, output, baseURL: 'https://berjon.com/' });
   const html = await ips.render(md, opt);
