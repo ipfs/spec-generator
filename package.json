@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build-css": "NODE_ENV=production cssn ./static/css/ipseity.css ./static/css/ipseity.min.css",
+    "build": "npm run build-css",
     "prepublishOnly": "npm run build-css",
     "test": "mocha"
   },
