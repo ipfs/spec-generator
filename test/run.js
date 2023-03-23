@@ -47,7 +47,7 @@ describe('Full Run', function () {
     selectron('a[href="#dfn-Frontmatter"][data-dfn-type="dfn"]', 'frontmatter');
   });
   it('outputs references', async () => {
-    const refs = JSON.parse(await readFile(rel('fixtures/out/.well-known/ipseity/references.json')));
+    const refs = JSON.parse(await readFile(rel('fixtures/out/.well-known/spec-generator/references.json')));
     const sfs = refs['spec-for-specs'];
     ok(sfs, 'has a spec-for-specs entry');
     equal(sfs.title, 'Spec for Specs', 'title is correct');
@@ -56,7 +56,7 @@ describe('Full Run', function () {
     equal(sfs.href, 'https://berjon.com/specs/spec-for-specs/', 'href is correct');
   });
   it('outputs definitions', async () => {
-    const refs = JSON.parse(await readFile(rel('fixtures/out/.well-known/ipseity/definitions/spec-for-specs.json')));
+    const refs = JSON.parse(await readFile(rel('fixtures/out/.well-known/spec-generator/definitions/spec-for-specs.json')));
     equal(refs.spec.title, 'Spec for Specs', 'title is correct');
     equal(refs.spec.url, 'https://berjon.com/specs/spec-for-specs/', 'url is correct');
     const dfns = refs.dfns.filter(d => d.id === 'dfn-spec');
