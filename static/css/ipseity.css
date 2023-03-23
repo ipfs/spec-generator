@@ -190,17 +190,6 @@ https://www.figma.com/proto/mH0OlgikgKzLmbMNO3noBs/IPFS-Brand-sheet-public?node-
   --contrast-bg: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: var(--ipfs-text);
-    --fg: var(--ipfs-off-white);
-    --stark-bg: #000;
-    --stark-fg: #fff;
-    --link-colour: var(--ipfs-yellow);
-    --contrast-bg: var(--fg);
-  }
-}
-
 html {
   background: var(--bg);
   color: var(--fg);
