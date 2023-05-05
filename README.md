@@ -58,7 +58,11 @@ The `config` file have the following format:
   "input": "./src/",
   "output": "./out/",
   "template": "./template.html",
-  "baseURL": "https://specs.ipfs.tech"
+  "baseURL": "https://specs.ipfs.tech",
+  "github": {
+    "repository": "ipfs/specs",
+    "defaultBranch": "main"
+  }
 }
 ```
 
@@ -69,6 +73,9 @@ The fields are simple:
 - `template`: the template file, relative to the config file.
 - `baseURL`: the base URL at which the specs are published. This is used to generated the
   bibliographic entries for the specs in this site.
+- `github`: optional settings to generate commit history and feedback links for
+  each specification. Currently, we only support GitHub. Feel free to open a PR
+  to add support for other services.
 
 All fields are required except `baseURL`, and `baseURL` is highly recommended.
 
