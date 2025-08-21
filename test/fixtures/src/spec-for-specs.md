@@ -1,4 +1,5 @@
 ---
+title: Spec for Specs
 date: 1977-03-15
 editors:
   - name: Robin Berjon
