@@ -240,8 +240,6 @@ em.rfc2119 {
 }
 .toc > li li {
   margin: 0.3rem 0;
-}
-.toc > li li {
   font-weight: normal;
 }
 .toc a {
@@ -256,10 +254,24 @@ em.rfc2119 {
 #toc .toc .secno {
   margin-left: -4rem;
 }
+/* Progressive width for section numbers at each level */
 .toc .secno {
   float: left;
   width: 4rem;
   white-space: nowrap;
+  color: var(--ipfs-ash-grey);
+}
+.toc li li .secno {
+  width: 5.5rem;
+}
+.toc li li li .secno {
+  width: 7rem;
+}
+.toc li li li li .secno {
+  width: 8.5rem;
+}
+.toc li li li li li .secno {
+  width: 10rem;
 }
 body:not(.toc-inline) :not(li) > .toc {
   margin-left: 4rem;
