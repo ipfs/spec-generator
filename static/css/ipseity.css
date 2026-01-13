@@ -360,6 +360,33 @@ table.ipseity-data-table {
   padding-right: 0.4rem;
 }
 
+/* Markdown tables (GFM) */
+table:not(.ipseity-data-table) {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  background: var(--stark-bg);
+  border: 1px solid var(--ipfs-ash-grey);
+}
+table:not(.ipseity-data-table) thead {
+  border-bottom: 2px solid var(--ipfs-steel-grey);
+}
+table:not(.ipseity-data-table) th {
+  background: color-mix(in srgb, var(--bg) 90%, var(--fg));
+  color: var(--fg);
+  font-weight: var(--weight-semi-bold);
+  text-align: left;
+}
+table:not(.ipseity-data-table) tbody tr:nth-child(even) {
+  background: var(--bg);
+}
+table:not(.ipseity-data-table) th,
+table:not(.ipseity-data-table) td {
+  border: 1px solid var(--ipfs-ash-grey);
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+}
+
 #ipseity-reports {
   position: fixed;
   top: 1rem;
