@@ -6,11 +6,10 @@ editors:
     email: robin@berjon.com
     url: https://berjon.com/
     github: darobin
-    twitter: robinberjon
-    mastodon: "@robin@mastodon.social"
+    bluesky: "robin.berjon.com"
     affiliation:
-        name: Protocol Labs
-        url: https://protocol.ai/
+        name: Supramundane Agency
+        url: https://supramundane.agency/
 stability: reliable
 xref:
   - dom
